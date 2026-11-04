@@ -2363,6 +2363,26 @@ msgctxt "#31763"
 msgid "dropped"
 msgstr ""
 
+msgctxt "#31764"
+msgid "top"
+msgstr ""
+
+msgctxt "#31765"
+msgid "bottom"
+msgstr ""
+
+msgctxt "#31766"
+msgid "Video"
+msgstr ""
+
+msgctxt "#31767"
+msgid "Frame rate"
+msgstr ""
+
+msgctxt "#31768"
+msgid "CPU temperature"
+msgstr ""
+
 msgctxt "#31770"
 msgid "Primaries"
 msgstr ""

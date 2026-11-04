@@ -145,7 +145,7 @@
 						<font>FullMediaInfoTaglineFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$INFO[Player.Process(pixformat)]</label>
+						<label fallback="31001">$VAR[AvdvPixFormatVar]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -364,7 +364,7 @@
 						<font>FullMediaInfoTaglineFont</font>
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
-						<label fallback="31001">$INFO[System.CpuUsage]</label>
+						<label fallback="31001">$VAR[AvdvCpuUsageVar]</label>
 					</control>
 				</control>
 				<control type="group">
@@ -422,6 +422,27 @@
 						<textcolor>MediaInfoItemColor2</textcolor>
 						<shadowcolor>ShadowColor</shadowcolor>
 						<label fallback="31001">$INFO[System.FPS,, fps]</label>
+					</control>
+				</control>
+				<control type="group">
+					<description>Rapier avdvplus : température CPU</description>
+					<height>20</height>
+					<visible>!String.IsEmpty(System.CPUTemperature)</visible>
+					<control type="label">
+						<width>160</width>
+						<font>FullMediaInfoTaglineFont</font>
+						<textcolor>MediaInfoItemColor</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$LOCALIZE[31768]:</label>
+					</control>
+					<control type="label">
+						<left>145</left>
+						<width>80</width>
+						<align>right</align>
+						<font>FullMediaInfoTaglineFont</font>
+						<textcolor>MediaInfoItemColor2</textcolor>
+						<shadowcolor>ShadowColor</shadowcolor>
+						<label>$INFO[System.CPUTemperature]</label>
 					</control>
 				</control>
 			</control>

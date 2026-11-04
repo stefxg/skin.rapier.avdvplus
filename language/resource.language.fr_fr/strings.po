@@ -1714,6 +1714,26 @@ msgctxt "#31763"
 msgid "dropped"
 msgstr "perdues"
 
+msgctxt "#31764"
+msgid "top"
+msgstr "haut"
+
+msgctxt "#31765"
+msgid "bottom"
+msgstr "bas"
+
+msgctxt "#31766"
+msgid "Video"
+msgstr "Vidéo"
+
+msgctxt "#31767"
+msgid "Frame rate"
+msgstr "Images/s"
+
+msgctxt "#31768"
+msgid "CPU temperature"
+msgstr "Température CPU"
+
 msgctxt "#31770"
 msgid "Primaries"
 msgstr "Primaires"

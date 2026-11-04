@@ -29,7 +29,7 @@
 
 	<!-- profil d'origine si avdvplus a converti le flux (ex. P7 FEL → P8.1) -->
 	<variable name="AvdvDVSourceProfileVar">
-		<value condition="!String.IsEmpty(Player.Process(video.source.dovi.profile)) + !String.IsEqual(Player.Process(video.source.dovi.profile),Player.Process(video.dovi.profile))">$LOCALIZE[31750] $INFO[Player.Process(video.source.dovi.profile),P]$INFO[Player.Process(video.source.dovi.bl.signal.compatibility),.]$VAR[AvdvDVSourceELVar, ]</value>
+		<value condition="Integer.IsGreater(Player.Process(video.source.dovi.profile),0) + !String.IsEqual(Player.Process(video.source.dovi.profile),Player.Process(video.dovi.profile))">$LOCALIZE[31750] $INFO[Player.Process(video.source.dovi.profile),P]$INFO[Player.Process(video.source.dovi.bl.signal.compatibility),.]$VAR[AvdvDVSourceELVar, ]</value>
 	</variable>
 
 	<variable name="AvdvDVSourceELVar">
@@ -43,20 +43,20 @@
 	</variable>
 
 	<variable name="AvdvDVRpuVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR FF5FD35F]■[/COLOR]</value>
-		<value>[COLOR FF5E5E5E]■[/COLOR]</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.rpu.present),1)">[COLOR FF5FD35F]RPU[/COLOR]</value>
+		<value>[COLOR FF5E5E5E]RPU[/COLOR]</value>
 	</variable>
 	<variable name="AvdvDVBlVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.bl.present),1)">[COLOR FF5FD35F]■[/COLOR]</value>
-		<value>[COLOR FF5E5E5E]■[/COLOR]</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.bl.present),1)">[COLOR FF5FD35F]BL[/COLOR]</value>
+		<value>[COLOR FF5E5E5E]BL[/COLOR]</value>
 	</variable>
 	<variable name="AvdvDVElVar">
-		<value condition="String.IsEqual(Player.Process(video.dovi.el.present),1)">[COLOR FF5FD35F]■[/COLOR]</value>
-		<value>[COLOR FF5E5E5E]■[/COLOR]</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.el.present),1)">[COLOR FF5FD35F]EL[/COLOR]</value>
+		<value>[COLOR FF5E5E5E]EL[/COLOR]</value>
 	</variable>
 
 	<variable name="AvdvDVMetaVar">
-		<value condition="!String.IsEmpty(Player.Process(video.source.dovi.meta.version)) + !String.IsEqual(Player.Process(video.source.dovi.meta.version),Player.Process(video.dovi.meta.version))">$INFO[Player.Process(video.source.dovi.meta.version)] → $INFO[Player.Process(video.dovi.meta.version)]</value>
+		<value condition="!String.IsEmpty(Player.Process(video.source.dovi.meta.version)) + !String.IsEqual(Player.Process(video.source.dovi.meta.version),Player.Process(video.dovi.meta.version))">$INFO[Player.Process(video.source.dovi.meta.version)] &gt; $INFO[Player.Process(video.dovi.meta.version)]</value>
 		<value>$INFO[Player.Process(video.dovi.meta.version)]</value>
 	</variable>
 
@@ -76,16 +76,16 @@
 	</variable>
 
 	<variable name="AvdvFpsVar">
-		<value condition="!String.IsEmpty(Player.Process(amlogic.video.fps.info))">$INFO[Player.Process(amlogic.video.fps.info)]$INFO[Player.Process(amlogic.video.fps.drop),  •  $LOCALIZE[31763] ,]</value>
+		<value condition="Integer.IsGreater(Player.Process(amlogic.video.fps.drop),0)">$INFO[Player.Process(videofps),, fps]  •  [COLOR FFFFA040]$INFO[Player.Process(amlogic.video.fps.drop),$LOCALIZE[31763] ,][/COLOR]</value>
 		<value>$INFO[Player.Process(videofps),, fps]</value>
 	</variable>
 
 	<variable name="AvdvLiveBitrateVar">
-		<value>$INFO[Player.Process(video.live.mibit.rate),$LOCALIZE[291] ,]$INFO[Player.Process(audio.live.mibit.rate),  •  $LOCALIZE[292] ,]</value>
+		<value>$INFO[Player.Process(video.live.mibit.rate),$LOCALIZE[31766] ,]$INFO[Player.Process(audio.live.mibit.rate),  •  $LOCALIZE[292] ,]</value>
 	</variable>
 
 	<variable name="AvdvQueueVar">
-		<value>$INFO[Player.Process(video.queue.level),$LOCALIZE[291] ,%]$INFO[Player.Process(audio.queue.level),  •  $LOCALIZE[292] ,%]</value>
+		<value>$INFO[Player.Process(video.queue.level),$LOCALIZE[31766] ,%]$INFO[Player.Process(audio.queue.level),  •  $LOCALIZE[292] ,%]</value>
 	</variable>
 
 	<variable name="AvdvAudioObjectsVar">
@@ -93,7 +93,17 @@
 	</variable>
 
 	<variable name="AvdvAudioLayoutVar">
-		<value>$INFO[Player.Process(audio.layout.name)]$INFO[Player.Process(audiochannelssink),  →  ]</value>
+		<value>$INFO[Player.Process(audio.layout.name)]$INFO[Player.Process(audiochannelssink),  &gt;  ]</value>
+	</variable>
+
+	<variable name="AvdvPixFormatVar">
+		<value condition="!String.IsEmpty(Player.Process(amlogic.pixformat))">$INFO[Player.Process(amlogic.pixformat)]</value>
+		<value>$INFO[Player.Process(pixformat)]</value>
+	</variable>
+
+	<variable name="AvdvCpuUsageVar">
+		<value condition="!String.IsEmpty(System.CpuAltUsage)">$INFO[System.CpuAltUsage] %</value>
+		<value>$INFO[System.CpuUsage]</value>
 	</variable>
 
 	<!-- ============================================================ ligne label / valeur -->
@@ -218,12 +228,12 @@
 				</include>
 				<include content="AvdvInfoRow">
 					<param name="label" value="$LOCALIZE[31754]" />
-					<param name="value" value="$INFO[Player.Process(video.active.area.top.lines),,  ↑]$INFO[Player.Process(video.active.area.bottom.lines),   ,  ↓]" />
+					<param name="value" value="$INFO[Player.Process(video.active.area.top.lines),, $LOCALIZE[31764]]$INFO[Player.Process(video.active.area.bottom.lines),  •  , $LOCALIZE[31765]]" />
 					<param name="visible" value="[Integer.IsGreater(Player.Process(video.active.area.top.lines),0) | Integer.IsGreater(Player.Process(video.active.area.bottom.lines),0)]" />
 				</include>
 				<include content="AvdvInfoRow">
 					<param name="label" value="$LOCALIZE[31761]" />
-					<param name="value" value="$VAR[AvdvLiveBitrateVar] Mb/s" />
+					<param name="value" value="$VAR[AvdvLiveBitrateVar] Mbit/s" />
 					<param name="visible" value="!String.IsEmpty(Player.Process(video.live.mibit.rate))" />
 				</include>
 			</control>
@@ -260,7 +270,7 @@
 				</include>
 				<include content="AvdvInfoRow">
 					<param name="label" value="$LOCALIZE[31743]" />
-					<param name="value" value="RPU $VAR[AvdvDVRpuVar]   BL $VAR[AvdvDVBlVar]   EL $VAR[AvdvDVElVar]$VAR[AvdvDualTrackVar,   ,]" />
+					<param name="value" value="$VAR[AvdvDVRpuVar]  •  $VAR[AvdvDVBlVar]  •  $VAR[AvdvDVElVar]$VAR[AvdvDualTrackVar,  •  ,]" />
 					<param name="visible" value="$EXP[AvdvIsDolbyVision]" />
 				</include>
 				<include content="AvdvInfoRow">
@@ -304,46 +314,46 @@
 				<include content="AvdvInfoRow">
 					<param name="label" value="$LOCALIZE[31756]" />
 					<param name="value" value="$INFO[Player.Process(amlogic.displaymode)]" />
-					<param name="labelwidth" value="130" />
-					<param name="valuewidth" value="245" />
+					<param name="labelwidth" value="150" />
+					<param name="valuewidth" value="225" />
 				</include>
 				<include content="AvdvInfoRow">
 					<param name="label" value="EOTF / Gamut" />
 					<param name="value" value="$INFO[Player.Process(amlogic.eoft_gamut)]" />
-					<param name="labelwidth" value="130" />
-					<param name="valuewidth" value="245" />
+					<param name="labelwidth" value="150" />
+					<param name="valuewidth" value="225" />
 				</include>
 				<include content="AvdvInfoRow">
 					<param name="label" value="$LOCALIZE[31758]" />
 					<param name="value" value="$VAR[AvdvVS10Var]" />
-					<param name="labelwidth" value="130" />
-					<param name="valuewidth" value="245" />
+					<param name="labelwidth" value="150" />
+					<param name="valuewidth" value="225" />
 					<param name="visible" value="!String.IsEmpty(Player.Process(amlogic.vs10.mode))" />
 				</include>
 				<include content="AvdvInfoRow">
 					<param name="label" value="$LOCALIZE[31227]" />
 					<param name="value" value="$INFO[Player.Process(amlogic.pixformat)]" />
-					<param name="labelwidth" value="130" />
-					<param name="valuewidth" value="245" />
+					<param name="labelwidth" value="150" />
+					<param name="valuewidth" value="225" />
 					<param name="visible" value="!String.IsEmpty(Player.Process(amlogic.pixformat))" />
 				</include>
 				<include content="AvdvInfoRow">
-					<param name="label" value="$LOCALIZE[31226]" />
+					<param name="label" value="$LOCALIZE[31767]" />
 					<param name="value" value="$VAR[AvdvFpsVar]" />
-					<param name="labelwidth" value="130" />
-					<param name="valuewidth" value="245" />
+					<param name="labelwidth" value="150" />
+					<param name="valuewidth" value="225" />
 				</include>
 				<include content="AvdvInfoRow">
 					<param name="label" value="$LOCALIZE[31760]" />
 					<param name="value" value="$INFO[System.SupportedHDRTypes]" />
-					<param name="labelwidth" value="130" />
-					<param name="valuewidth" value="245" />
+					<param name="labelwidth" value="150" />
+					<param name="valuewidth" value="225" />
 				</include>
 				<include content="AvdvInfoRow">
 					<param name="label" value="$LOCALIZE[31762]" />
 					<param name="value" value="$VAR[AvdvQueueVar]" />
-					<param name="labelwidth" value="130" />
-					<param name="valuewidth" value="245" />
+					<param name="labelwidth" value="150" />
+					<param name="valuewidth" value="225" />
 					<param name="visible" value="!String.IsEmpty(Player.Process(video.queue.level))" />
 				</include>
 			</control>

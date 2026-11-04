@@ -1,4 +1,15 @@
 ------------------------
+[B]21.0.1 (04-November-26) - Rapier avdvplus[/B]
+------------------------
+Corrections après le premier test sur Ugoos AM6B+ :
+- Profil Dolby Vision source masqué quand il vaut 0 (affichait « source P0.0 »).
+- Couches RPU / BL / EL colorées en texte (le carré ■ n'existe pas dans la police de la skin).
+- Bandes noires « 277 haut • 277 bas » au lieu de flèches non affichables ; « > » au lieu de « → ».
+- Sortie Amlogic : libellés élargis, « Images/s » = fréquence + images perdues (en orange si > 0).
+- « Vidéo » au singulier, débits en Mbit/s.
+- Panneau Rapier : format de pixel Amlogic au lieu de « unknown », usage CPU compact (System.CpuAltUsage), température CPU.
+
+------------------------
 [B]21.0.0 (04-November-26) - Rapier avdvplus[/B]
 ------------------------
 Portage personnel Kodi 21 Omega / CoreELEC avdvplus (base Rapier 13.0.14 de Scarfa et Gade).
