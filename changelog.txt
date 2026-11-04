@@ -1,4 +1,10 @@
 ------------------------
+[B]21.0.2 (04-November-26) - Rapier avdvplus[/B]
+------------------------
+- Vue Mur (films, séries) : « Masquer le panneau infos du bas » et « Masquer le panneau d'infos étendues »
+  sont désormais indépendants (Rapier d'origine les rendait mutuellement exclusifs). Les deux peuvent être masqués.
+
+------------------------
 [B]21.0.1 (04-November-26) - Rapier avdvplus[/B]
 ------------------------
 Corrections après le premier test sur Ugoos AM6B+ :

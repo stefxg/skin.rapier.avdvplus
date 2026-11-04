@@ -341,9 +341,7 @@
 				<label>$LOCALIZE[31021]</label>
 				<selected>[Container.Content(Movies) + Skin.HasSetting(HideMoviesWallInfoPanel)] | [Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallInfoPanel)] | [Container.Content(Albums) + Skin.HasSetting(HideMusicWallInfoPanel)]</selected>
 				<onclick condition="Container.Content(Movies)">Skin.ToggleSetting(HideMoviesWallInfoPanel)</onclick>
-				<onclick condition="Container.Content(Movies) + Skin.HasSetting(HideMoviesWallExtendedInfoPanel) + Skin.HasSetting(HideMoviesWallInfoPanel)">Skin.ToggleSetting(HideMoviesWallExtendedInfoPanel)</onclick>
 				<onclick condition="Container.Content(TVShows)">Skin.ToggleSetting(HideTVShowsWallInfoPanel)</onclick>
-				<onclick condition="Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallExtendedInfoPanel) + Skin.HasSetting(HideTVShowsWallInfoPanel)">Skin.ToggleSetting(HideTVShowsWallExtendedInfoPanel)</onclick>
 				<onclick condition="Container.Content(Albums)">Skin.ToggleSetting(HideMusicWallInfoPanel)</onclick>
 				<visible>Skin.String(CurrentViewMode,69)</visible>
 			</control>
@@ -353,9 +351,7 @@
 				<label>$LOCALIZE[31971]</label>
 				<selected>[Container.Content(Movies) + !Skin.HasSetting(HideMoviesWallExtendedInfoPanel)] | [Container.Content(TVShows) + !Skin.HasSetting(HideTVShowsWallExtendedInfoPanel)]</selected>
 				<onclick condition="Container.Content(Movies)">Skin.ToggleSetting(HideMoviesWallExtendedInfoPanel)</onclick>
-				<onclick condition="Container.Content(Movies) + !Skin.HasSetting(HideMoviesWallExtendedInfoPanel) + !Skin.HasSetting(HideMoviesWallInfoPanel)">Skin.ToggleSetting(HideMoviesWallInfoPanel)</onclick>
 				<onclick condition="Container.Content(TVShows)">Skin.ToggleSetting(HideTVShowsWallExtendedInfoPanel)</onclick>
-				<onclick condition="Container.Content(TVShows) + !Skin.HasSetting(HideTVShowsWallExtendedInfoPanel) + !Skin.HasSetting(HideTVShowsWallInfoPanel)">Skin.ToggleSetting(HideTVShowsWallInfoPanel)</onclick>
 				<enable>[Container.Content(Movies) | !Skin.String(MoviesWallStyle,2)] | [Container.Content(TVShows) | !Skin.String(TVShowsWallStyle,2)]</enable>
 				<visible>Skin.String(CurrentViewMode,69) + [Container.Content(Movies) | Container.Content(TVShows)]</visible>
 			</control>
