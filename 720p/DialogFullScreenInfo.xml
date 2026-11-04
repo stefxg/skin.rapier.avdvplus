@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Rapier avdvplus - DialogFullScreenInfo.xml (fenêtre "fullscreeninfo", 12006)
+	Calque transparent : les flèches pilotent la lecture, OK ouvre l'OSD.
+-->
+<window>
+	<defaultcontrol always="true">999</defaultcontrol>
+	<controls>
+		<control type="button" id="999">
+			<left>0</left>
+			<top>0</top>
+			<width>ScreenWidth</width>
+			<height>ScreenHeight</height>
+			<texturefocus />
+			<texturenofocus />
+			<onright>StepForward</onright>
+			<onleft>StepBack</onleft>
+			<onup>ChapterOrBigStepForward</onup>
+			<ondown>ChapterOrBigStepBack</ondown>
+			<onclick>OSD</onclick>
+		</control>
+	</controls>
+</window>

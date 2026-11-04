@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Rapier avdvplus - DialogVideoManager.xml (Kodi 21 Omega)
+	Fenêtres ManageVideoVersions et ManageVideoExtras.
+	Ids imposés par CGUIDialogVideoManager / Versions / Extras :
+	  2 = titre, 50 = liste des éléments, 21..28 = boutons d'action.
+-->
+<window>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<depth>DepthDialog+</depth>
+	<include>DialogOpenCloseAnim</include>
+	<controls>
+		<control type="group">
+			<left>165</left>
+			<top>90</top>
+
+			<include content="DialogWithCloseBtn">
+				<param name="width" value="950" />
+				<param name="height" value="540" />
+				<param name="left" value="890" />
+			</include>
+
+			<control type="label" id="2">
+				<width>870</width>
+				<include>DialogTitle</include>
+			</control>
+
+			<!-- Affiche -->
+			<control type="image">
+				<left>DialogMarginOffsetX</left>
+				<top>DialogMarginOffsetY</top>
+				<width>220</width>
+				<height>330</height>
+				<aspectratio aligny="top">keep</aspectratio>
+				<fadetime>IconCrossfadeTime</fadetime>
+				<texture background="true">$VAR[VideoManagerPosterVar]</texture>
+			</control>
+
+			<!-- Liste des versions / extras -->
+			<control type="list" id="50">
+				<left>270</left>
+				<top>DialogMarginOffsetY</top>
+				<width>400</width>
+				<height>420</height>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<onleft>101</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="quadratic">200</scrolltime>
+				<itemlayout height="60">
+					<include content="VideoManagerListItem">
+						<param name="focused" value="false" />
+					</include>
+				</itemlayout>
+				<focusedlayout height="60">
+					<include content="VideoManagerListItem">
+						<param name="focused" value="Control.HasFocus(50)" />
+					</include>
+				</focusedlayout>
+			</control>
+
+			<control type="scrollbar" id="60">
+				<left>676</left>
+				<top>DialogMarginOffsetY</top>
+				<width>14</width>
+				<height>420</height>
+				<onleft>50</onleft>
+				<onright>101</onright>
+				<orientation>vertical</orientation>
+				<visible>Control.IsVisible(50)</visible>
+			</control>
+
+			<!-- Boutons d'action -->
+			<control type="grouplist" id="101">
+				<left>700</left>
+				<top>DialogMarginOffsetY</top>
+				<width>215</width>
+				<height>420</height>
+				<itemgap>4</itemgap>
+				<onleft condition="Integer.IsGreater(Container(50).NumItems,0)">50</onleft>
+				<onright condition="Integer.IsGreater(Container(50).NumItems,0)">50</onright>
+				<orientation>vertical</orientation>
+				<control type="button" id="21">
+					<description>Play</description>
+					<width>215</width>
+					<label>$LOCALIZE[208]</label>
+				</control>
+				<control type="button" id="22">
+					<description>Add version</description>
+					<width>215</width>
+					<label>$LOCALIZE[40014]</label>
+					<visible>Window.IsVisible(managevideoversions)</visible>
+				</control>
+				<control type="button" id="23">
+					<description>Add extra</description>
+					<width>215</width>
+					<label>$LOCALIZE[40015]</label>
+					<visible>Window.IsVisible(managevideoextras)</visible>
+				</control>
+				<control type="button" id="27">
+					<description>Choose art</description>
+					<width>215</width>
+					<label>$LOCALIZE[13511]</label>
+				</control>
+				<control type="button" id="24">
+					<description>Set default</description>
+					<width>215</width>
+					<label>$LOCALIZE[40004]</label>
+					<visible>Window.IsVisible(managevideoversions)</visible>
+				</control>
+				<control type="button" id="28">
+					<description>Rename</description>
+					<width>215</width>
+					<label>$LOCALIZE[118]</label>
+					<visible>Window.IsVisible(managevideoextras)</visible>
+				</control>
+				<control type="button" id="26">
+					<description>Remove</description>
+					<width>215</width>
+					<label>$LOCALIZE[15015]</label>
+				</control>
+				<control type="button" id="25">
+					<description>Choose version type</description>
+					<width>215</width>
+					<label>$LOCALIZE[40023]</label>
+					<visible>Window.IsVisible(managevideoversions)</visible>
+				</control>
+			</control>
+
+			<!-- Chemin du fichier sélectionné -->
+			<control type="label">
+				<left>DialogMarginOffsetX</left>
+				<top>485</top>
+				<width>880</width>
+				<height>30</height>
+				<font>ListFont2</font>
+				<textcolor>MediaInfoTitleColor2</textcolor>
+				<aligny>center</aligny>
+				<scroll>true</scroll>
+				<label>$INFO[Container(50).ListItem.FileNameAndPath]</label>
+			</control>
+		</control>
+	</controls>
+</window>

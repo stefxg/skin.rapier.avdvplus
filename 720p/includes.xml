@@ -14,6 +14,7 @@
 	<include file="includes_InfoPane.xml"/>
 	<include file="includes_MediaFlags.xml"/>
 	<include file="includes_MenuBar.xml"/>
+	<include file="includes_Omega.xml"/>
 	<include file="includes_PVR.xml"/>
 	<include file="includes_Scrollbars.xml"/>
 	<include file="includes_SkinSettingsBackgrounds.xml"/>
@@ -345,7 +346,7 @@
 			<include>ScreenSize</include>
 			<texture>dim.png</texture>
 			<animation effect="fade" start="0" end="50" time="450">VisibleChange</animation>
-			<visible>Window.IsActive(ShutdownMenu) | Window.IsActive(NumericInput) | Window.IsActive(LockSettings) | Window.IsActive(PlayerControls) | Window.IsActive(Favourites) | Window.IsActive(VirtualKeyboard)</visible>
+			<visible>Window.IsActive(ShutdownMenu) | Window.IsActive(NumericInput) | Window.IsActive(LockSettings) | Window.IsActive(PlayerControls) | Window.IsActive(FavouritesBrowser) | Window.IsActive(VirtualKeyboard)</visible>
 		</control>
 	</include>
 	

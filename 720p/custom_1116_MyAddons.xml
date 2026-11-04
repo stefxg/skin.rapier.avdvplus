@@ -568,7 +568,7 @@
 						<include>MenuBarIconBtn</include>
 						<texturefocus>gui/menu-bar-favourites-focus.png</texturefocus>
 						<texturenofocus>gui/menu-bar-favourites-nofocus.png</texturenofocus>
-						<onclick>ActivateWindow(Favourites)</onclick>
+						<onclick>ActivateWindow(FavouritesBrowser)</onclick>
 					</control>
 					<control type="togglebutton" id="347">
 						<description>Extra Options</description>

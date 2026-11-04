@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Rapier avdvplus - ajouts Kodi 21 Omega
+	Fichier propre au portage (CC BY-NC-SA 3.0, comme le reste de Rapier).
+-->
+<includes>
+	<variable name="VideoManagerPosterVar">
+		<value condition="!String.IsEmpty(Container(50).ListItem.Art(poster))">$INFO[Container(50).ListItem.Art(poster)]</value>
+		<value condition="!String.IsEmpty(Container(50).ListItem.Art(thumb))">$INFO[Container(50).ListItem.Art(thumb)]</value>
+		<value>DefaultVideo.png</value>
+	</variable>
+
+	<variable name="VideoManagerItemInfoVar">
+		<value condition="!String.IsEmpty(ListItem.VideoResolution)">$INFO[ListItem.VideoResolution,,p]$INFO[ListItem.VideoCodec,  •  ]$INFO[ListItem.HdrType,  •  ]$INFO[ListItem.AudioCodec,  •  ]$INFO[ListItem.AudioChannels,  ,ch]$INFO[ListItem.Duration,  •  ]</value>
+		<value>$INFO[ListItem.Label2]</value>
+	</variable>
+
+	<include name="VideoManagerListItem">
+		<param name="focused" default="false" />
+		<definition>
+			<control type="image">
+				<width>400</width>
+				<height>56</height>
+				<texture border="5">controls/button-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<width>400</width>
+				<height>56</height>
+				<texture border="5">controls/button-focus.png</texture>
+				<visible>$PARAM[focused]</visible>
+			</control>
+			<control type="label">
+				<left>10</left>
+				<top>3</top>
+				<width>380</width>
+				<height>30</height>
+				<font>ButtonFont2</font>
+				<textcolor>ButtonColor</textcolor>
+				<selectedcolor>SelectedColor2</selectedcolor>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Label]</label>
+			</control>
+			<control type="label">
+				<left>10</left>
+				<top>27</top>
+				<width>380</width>
+				<height>26</height>
+				<font>ListFont2</font>
+				<textcolor>MediaInfoTitleColor2</textcolor>
+				<aligny>center</aligny>
+				<label>$VAR[VideoManagerItemInfoVar]</label>
+			</control>
+		</definition>
+	</include>
+</includes>

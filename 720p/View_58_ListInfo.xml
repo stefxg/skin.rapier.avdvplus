@@ -606,7 +606,7 @@
 				<include content="ListInfoGrouplistContent">
 					<param name="label" value="$LOCALIZE[20360]:" />
 					<param name="maxwidth" value="110" />
-					<param name="info" value="$INFO[ListItem.Episodes]" />
+					<param name="info" value="$INFO[ListItem.Property(TotalEpisodes)]" />
 					<param name="visible" value="true" />
 				</include>
 				<include>ListInfoViewDot</include>

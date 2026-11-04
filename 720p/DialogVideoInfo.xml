@@ -332,7 +332,7 @@
 					<control type="group">
 						<top>225</top>
 						<left>469</left>
-						<visible>Control.HasFocus(15)</visible>
+						<visible>Control.HasFocus(216)</visible>
 						<include>FSMediaInfoOpenCloseAnim</include>
 						<control type="image">
 							<description>Border</description>
@@ -372,7 +372,7 @@
 						<onleft>505</onleft>
 						<onright condition="Control.IsVisible(61)">61</onright>
 						<include>FSMediaInfoOpenCloseAnim</include>
-						<visible>!Control.HasFocus(15)</visible>
+						<visible>!Control.HasFocus(216)</visible>
 						<itemlayout height="29">
 							<control type="image">
 								<top>27</top>
@@ -2124,7 +2124,7 @@
 					<pagecontrol>61</pagecontrol>
 					<include>FSMediaInfoOpenCloseAnim</include>
 					<autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
-					<visible>!Control.IsVisible(50) + [[String.IsEqual(ListItem.DBTYPE,movie) + !Control.HasFocus(15)] | [String.IsEqual(ListItem.DBTYPE,set) + System.AddonIsEnabled(script.skin.helper.service)] | [String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(UseTVShowsPosterCover)]] + String.IsEmpty(Skin.String(VideoInfoMenubar))</visible>
+					<visible>!Control.IsVisible(50) + [[String.IsEqual(ListItem.DBTYPE,movie) + !Control.HasFocus(216)] | [String.IsEqual(ListItem.DBTYPE,set) + System.AddonIsEnabled(script.skin.helper.service)] | [String.IsEqual(ListItem.DBTYPE,tvshow) + Skin.HasSetting(UseTVShowsPosterCover)]] + String.IsEmpty(Skin.String(VideoInfoMenubar))</visible>
 				</control>
 				
 				<control type="textbox" id="902">
@@ -2179,7 +2179,7 @@
 				</control>
 				
 				<control type="group" id="965">
-					<visible>!Control.HasFocus(15)</visible>
+					<visible>!Control.HasFocus(216)</visible>
 					<include>FSMediaInfoOpenCloseAnim</include>
 					
 					<control type="panel" id="50">

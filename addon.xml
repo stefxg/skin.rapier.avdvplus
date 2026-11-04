@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.rapier" version="13.0.14" name="Rapier" provider-name="Scarfa, Gade">
+<addon id="skin.rapier.avdvplus" version="21.0.0" name="Rapier avdvplus" provider-name="Scarfa, Gade (portage Omega/avdvplus)">
   <requires>
-    <import addon="xbmc.gui" version="5.15.0"/>
+    <import addon="xbmc.gui" version="5.17.0"/>
     <import addon="script.favourites" version="4.0.9"/>
 	<import addon="script.embuary.helper" version="2.0.2"/>
 	<import addon="resource.images.studios.white" version="0.0.2"/>
@@ -31,7 +31,7 @@
       <screenshot>resources/screenshot-09.jpg</screenshot>
       <screenshot>resources/screenshot-10.jpg</screenshot>
     </assets>
-    <news>[B]13.0.14[/B][CR]- Minor fixes[CR]- Replace script.cinemavision with script.preshowexperience[CR][I]For a full list of changes visit https://raw.githubusercontent.com/gade01/Rapier/master/changelog.txt[/I]</news>
+    <news>[B]21.0.0[/B][CR]- Portage Kodi 21 Omega (CoreELEC avdvplus)[CR]- Fenêtre Favoris → FavouritesBrowser[CR]- Boutons Versions / Extras dans la fiche vidéo[CR]- Ajout DialogVideoManager / DialogFullScreenInfo[CR][I]Basé sur Rapier 13.0.14 de Scarfa et Gade[/I]</news>
     <summary lang="bg_BG">Rapier от Scarfa и Gade.</summary>
     <summary lang="cs_CZ">Grafický vzhled vytvořili Scarfa a Gade.</summary>
     <summary lang="da_DK">Rapier skin af Scarfa, Gade.</summary>

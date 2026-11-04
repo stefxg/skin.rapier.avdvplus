@@ -315,10 +315,10 @@
 							<label>$LOCALIZE[31499]</label>
 						</control>
 						<control type="button" id="7001">
-							<description>skin.rapier</description>
+							<description>skin.rapier.avdvplus</description>
 							<include>SettingsContentBtn</include>
-							<label>Rapier</label>
-							<label2>$INFO[System.AddonVersion(skin.rapier)] $LOCALIZE[31437]</label2>
+							<label>Rapier avdvplus</label>
+							<label2>$INFO[System.AddonVersion(skin.rapier.avdvplus)] $LOCALIZE[31437]</label2>
 							<onclick>noop</onclick>
 						</control>
 						<control type="button" id="7002">

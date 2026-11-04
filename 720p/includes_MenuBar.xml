@@ -220,7 +220,7 @@
 				<include>MenuBarIconBtn</include>
 				<texturefocus>gui/menu-bar-favourites-focus.png</texturefocus>
 				<texturenofocus>gui/menu-bar-favourites-nofocus.png</texturenofocus>
-				<onclick>ActivateWindow(Favourites)</onclick>
+				<onclick>ActivateWindow(FavouritesBrowser)</onclick>
 				<animation effect="fade" start="100" end="60" condition="Window.IsActive(favouritesbrowser)">Conditional</animation>
 				<enable>!Window.IsActive(favouritesbrowser)</enable>
 			</control>
@@ -1548,14 +1548,37 @@
 			<control type="image" id="118">
 				<include>MenuBarSeparator</include>
 			</control>
+			<!-- Kodi 21 Omega : gestion des versions / extras (ids 14 et 15 gérés par CGUIDialogVideoInfo) -->
+			<control type="button" id="14">
+				<description>Video versions</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[40000][/UPPERCASE]</label>
+				<enable>!Skin.HasSetting(EnableKioskMode)</enable>
+				<visible>String.IsEqual(ListItem.DBTYPE,movie)</visible>
+			</control>
+			<control type="image" id="131">
+				<include>MenuBarSeparator</include>
+				<visible>Control.IsVisible(14)</visible>
+			</control>
+			<control type="button" id="15">
+				<description>Video extras</description>
+				<include>MenuBarSettingsBtn</include>
+				<label>[UPPERCASE]$LOCALIZE[40211][/UPPERCASE]</label>
+				<enable>!Skin.HasSetting(EnableKioskMode)</enable>
+				<visible>String.IsEqual(ListItem.DBTYPE,movie)</visible>
+			</control>
+			<control type="image" id="132">
+				<include>MenuBarSeparator</include>
+				<visible>Control.IsVisible(15)</visible>
+			</control>
 			<control type="button" id="11">
 				<description>Play Trailer</description>
 				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[20410][/UPPERCASE]</label>
 				<visible>!String.IsEmpty(ListItem.Trailer) + !Skin.HasSetting(PlayTrailerWindowed)</visible>
 			</control>
-			<control type="button" id="15">
-				<description>Play Trailer</description>
+			<control type="button" id="216">
+				<description>Play Trailer (windowed) - id 15 is reserved for Extras since Kodi 21</description>
 				<include>MenuBarSettingsBtn</include>
 				<label>[UPPERCASE]$LOCALIZE[20410][/UPPERCASE]</label>
 				<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
