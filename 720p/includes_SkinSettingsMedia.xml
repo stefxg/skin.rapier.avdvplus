@@ -344,6 +344,27 @@
 					<onclick>Skin.ToggleSetting(HideRatingMediaFlag)</onclick>
 					<enable>!Skin.HasSetting(DisableMediaFlags)</enable>
 				</control>
+				<!-- Rapier avdvplus -->
+				<control type="button" id="3090">
+					<description>avdvplus Label</description>
+					<include>SettingsHeaderBtn</include>
+					<label>$LOCALIZE[31780]</label>
+				</control>
+				<control type="radiobutton" id="3091">
+					<description>Hide Dolby Vision profile badge</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31782]</label>
+					<selected>Skin.HasSetting(avdv.HideDVProfileBadge)</selected>
+					<onclick>Skin.ToggleSetting(avdv.HideDVProfileBadge)</onclick>
+					<enable>!Skin.HasSetting(DisableMediaFlags)</enable>
+				</control>
+				<control type="radiobutton" id="3092">
+					<description>Hide avdvplus player process panel</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31781]</label>
+					<selected>Skin.HasSetting(avdv.HideProcessPanel)</selected>
+					<onclick>Skin.ToggleSetting(avdv.HideProcessPanel)</onclick>
+				</control>
 				<control type="radiobutton" id="3016">
 					<description>Show Subtitle Media Flag</description>
 					<include>SettingsContentRadioBtn</include>

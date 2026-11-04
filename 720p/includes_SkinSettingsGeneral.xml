@@ -97,7 +97,7 @@
 					<onclick>Skin.ToggleSetting(EnableBatteryNotification)</onclick>
 					<onclick>ReloadSkin()</onclick>
 					<include>ReloadSkinNotification</include>
-					<visible>Integer.IsGreater(System.BatteryLevel,0)</visible>
+					<visible>false</visible>
 				</control>
 				<control type="radiobutton" id="1015">
 					<description>Enable Autocompletions for Keyboard Dialog</description>

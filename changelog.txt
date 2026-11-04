@@ -1,4 +1,18 @@
 ------------------------
+[B]21.0.0 (04-November-26) - Rapier avdvplus[/B]
+------------------------
+Portage personnel Kodi 21 Omega / CoreELEC avdvplus (base Rapier 13.0.14 de Scarfa et Gade).
+- xbmc.gui 5.17.0, nouvel identifiant skin.rapier.avdvplus.
+- Favoris : DialogFavourites (supprimée en v21) remplacée par FavouritesBrowser.
+- Fiche vidéo : boutons Versions (14) et Extras (15) ; bande-annonce fenêtrée déplacée en 216.
+- Ajout DialogVideoManager.xml et DialogFullScreenInfo.xml.
+- ListItem.Episodes -> ListItem.Property(TotalEpisodes) ; suppression des tests System.BatteryLevel.
+- Logos HDR10+ et HDR Vivid, types HDR principal + alternatif, badge du profil Dolby Vision (+ FEL/MEL en lecture).
+- Codecs audio avdvplus : truehd_atmos, eac3_ddp_atmos, dtshd_ma_x(_imax), dts_es, dts_96_24, dts_express, pcm_*.
+- Panneau avdvplus dans les infos de lecture : source vidéo / Dolby Vision / sortie Amlogic.
+- Réglages : masquer le badge du profil DV, masquer le panneau avdvplus.
+
+------------------------
 [B]13.0.14 (27-April-23)[/B]
 ------------------------
 - Minor fixes.

@@ -6,13 +6,18 @@
 	</variable>
 	
 	<variable name="DTSHDMediaFlag">
-		<value condition="String.Contains(ListItem.AudioCodec,dtshd_ma) + [String.Contains(ListItem.FilenameAndPath,dtsx) | String.Contains(ListItem.FilenameAndPath,dts-x)]">dtsx.png</value>
+		<value condition="String.Contains(ListItem.AudioCodec,dtshd_ma_x) | String.Contains(ListItem.AudioProfile,DTS:X) | [String.Contains(ListItem.AudioCodec,dtshd_ma) + [String.Contains(ListItem.FilenameAndPath,dtsx) | String.Contains(ListItem.FilenameAndPath,dts-x)]]">dtsx.png</value>
 		<value condition="String.Contains(ListItem.AudioCodec,dtshd_ma)">dtshd_ma.png</value>
 		<value condition="String.Contains(ListItem.AudioCodec,dtshd_hra)">dtshd_hra.png</value>
 	</variable>
 	
+	<variable name="PlayerDVELTypeVar">
+		<value condition="String.IsEqual(Player.Process(video.dovi.el.type),full)">FEL</value>
+		<value condition="String.IsEqual(Player.Process(video.dovi.el.type),minimum)">MEL</value>
+	</variable>
+
 	<variable name="PlayerDTSHDMediaFlag">
-		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma) + [String.Contains(Player.FilenameAndPath,dtsx) | String.Contains(Player.FilenameAndPath,dts-x)]">dtsx.png</value>
+		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma_x) | [String.Contains(VideoPlayer.AudioCodec,dtshd_ma) + [String.Contains(Player.FilenameAndPath,dtsx) | String.Contains(Player.FilenameAndPath,dts-x)]]">dtsx.png</value>
 		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_ma)">dtshd_ma.png</value>
 		<value condition="String.Contains(VideoPlayer.AudioCodec,dtshd_hra)">dtshd_hra.png</value>
 	</variable>
@@ -126,7 +131,26 @@
 			<height>35</height>
 			<texture>flagging/$VAR[MediaFlagTheme]/video/dolbyvision.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(ListItem.HdrType,dolbyvision)</visible>
+			<visible>String.IsEqual(ListItem.HdrType,dolbyvision)</visible>
+		</control>
+		<control type="group">
+			<width>56</width>
+			<height>35</height>
+			<visible>String.IsEqual(ListItem.HdrType,dolbyvision) + !String.IsEmpty(ListItem.DvProfile) + !Skin.HasSetting(avdv.HideDVProfileBadge)</visible>
+			<control type="image">
+				<width>56</width>
+				<height>35</height>
+				<texture border="6">flagging/$VAR[MediaFlagTheme]/video/flagbox.png</texture>
+			</control>
+			<control type="label">
+				<width>56</width>
+				<height>35</height>
+				<font>MediaFlagSubtitleFont</font>
+				<textcolor>SelectedColor</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[B]$INFO[ListItem.DvProfile,P][/B]</label>
+			</control>
 		</control>
 		<control type="image" id="734">
 			<description>HDR10 Codec</description>
@@ -134,7 +158,21 @@
 			<height>35</height>
 			<texture>flagging/$VAR[MediaFlagTheme]/video/hdr10.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(ListItem.HdrType,hdr10)</visible>
+			<visible>String.IsEqual(ListItem.HdrType,hdr10) | String.IsEqual(ListItem.HdrTypeAlt,hdr10)</visible>
+		</control>
+		<control type="image">
+			<description>HDR10+</description>
+			<width>91</width>
+			<height>35</height>
+			<texture>flagging/$VAR[MediaFlagTheme]/video/hdr10plus.png</texture>
+			<visible>String.IsEqual(ListItem.HdrType,hdr10plus) | String.IsEqual(ListItem.HdrTypeAlt,hdr10plus)</visible>
+		</control>
+		<control type="image">
+			<description>HDR Vivid</description>
+			<width>122</width>
+			<height>35</height>
+			<texture>flagging/$VAR[MediaFlagTheme]/video/hdrvivid.png</texture>
+			<visible>String.IsEqual(ListItem.HdrType,hdrvivid) | String.IsEqual(ListItem.HdrTypeAlt,hdrvivid)</visible>
 		</control>
 		<control type="image" id="735">
 			<description>HLG Codec</description>
@@ -142,7 +180,7 @@
 			<height>35</height>
 			<texture>flagging/$VAR[MediaFlagTheme]/video/hlg.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(ListItem.HdrType,hlg)</visible>
+			<visible>String.IsEqual(ListItem.HdrType,hlg) | String.IsEqual(ListItem.HdrTypeAlt,hlg)</visible>
 		</control>
 		<control type="image" id="610">
 			<description>Xvid Codec</description>
@@ -454,7 +492,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/dts.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(ListItem.AudioCodec,dca) + ![String.Contains(ListItem.FilenameAndPath,dtses) | String.Contains(ListItem.FilenameAndPath,dts-es)]</visible>
+			<visible>[String.IsEqual(ListItem.AudioCodec,dca) | String.IsEqual(ListItem.AudioCodec,dts) | String.IsEqual(ListItem.AudioCodec,dts_es) | String.IsEqual(ListItem.AudioCodec,dts_96_24) | String.IsEqual(ListItem.AudioCodec,dts_express)] + ![String.IsEqual(ListItem.AudioCodec,dts_es) | String.Contains(ListItem.FilenameAndPath,dtses) | String.Contains(ListItem.FilenameAndPath,dts-es) | String.Contains(ListItem.AudioProfile,DTS-ES)]</visible>
 		</control>
 		<control type="image" id="743">
 			<description>DTS-ES Codec</description>
@@ -463,7 +501,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/dtses.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(ListItem.AudioCodec,dca) + [String.Contains(ListItem.FilenameAndPath,dtses) | String.Contains(ListItem.FilenameAndPath,dts-es)]</visible>
+			<visible>[String.IsEqual(ListItem.AudioCodec,dca) | String.IsEqual(ListItem.AudioCodec,dts) | String.IsEqual(ListItem.AudioCodec,dts_es) | String.IsEqual(ListItem.AudioCodec,dts_96_24) | String.IsEqual(ListItem.AudioCodec,dts_express)] + [String.IsEqual(ListItem.AudioCodec,dts_es) | String.Contains(ListItem.FilenameAndPath,dtses) | String.Contains(ListItem.FilenameAndPath,dts-es) | String.Contains(ListItem.AudioProfile,DTS-ES)]</visible>
 		</control>
 		<control type="image" id="682">
 			<description>PCM Codec</description>
@@ -472,7 +510,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/pcm.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(ListItem.AudioCodec,pcm_s16be) | String.Contains(ListItem.AudioCodec,pcm_s16le) | String.Contains(ListItem.AudioCodec,pcm_u8) | String.Contains(ListItem.AudioCodec,pcm_bluray)</visible>
+			<visible>String.StartsWith(ListItem.AudioCodec,pcm)</visible>
 		</control>
 		<control type="image" id="626">
 			<description>AAC Codec</description>
@@ -499,7 +537,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/eac3.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(ListItem.AudioCodec,eac3) + !String.Contains(ListItem.FilenameAndPath,.atmos)</visible>
+			<visible>String.Contains(ListItem.AudioCodec,eac3) + ![String.Contains(ListItem.AudioCodec,atmos) | String.Contains(ListItem.FilenameAndPath,.atmos) | String.Contains(ListItem.AudioProfile,Atmos)]</visible>
 		</control>
 		<control type="image" id="628">
 			<description>TrueHD Codec</description>
@@ -508,7 +546,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/truehd.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(ListItem.AudioCodec,truehd) + !String.Contains(ListItem.FilenameAndPath,.atmos)</visible>
+			<visible>String.Contains(ListItem.AudioCodec,truehd) + ![String.Contains(ListItem.AudioCodec,atmos) | String.Contains(ListItem.FilenameAndPath,.atmos) | String.Contains(ListItem.AudioProfile,Atmos)]</visible>
 		</control>
 		<control type="image" id="722">
 			<description>Atmos Codec</description>
@@ -517,7 +555,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/atmos.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>[String.Contains(ListItem.AudioCodec,eac3) | String.Contains(ListItem.AudioCodec,truehd)] + String.Contains(ListItem.FilenameAndPath,.atmos)</visible>
+			<visible>[String.Contains(ListItem.AudioCodec,eac3) | String.Contains(ListItem.AudioCodec,truehd)] + [String.Contains(ListItem.AudioCodec,atmos) | String.Contains(ListItem.FilenameAndPath,.atmos) | String.Contains(ListItem.AudioProfile,Atmos)]</visible>
 		</control>
 		<control type="image" id="629">
 			<description>WMA STD V2/WMA Codec</description>
@@ -877,7 +915,45 @@
 			<height>35</height>
 			<texture>flagging/$VAR[MediaFlagTheme]/video/dolbyvision.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(VideoPlayer.HdrType,dolbyvision)</visible>
+			<visible>String.IsEqual(VideoPlayer.HdrType,dolbyvision)</visible>
+		</control>
+		<control type="group">
+			<width>56</width>
+			<height>35</height>
+			<visible>String.IsEqual(VideoPlayer.HdrType,dolbyvision) + !String.IsEmpty(Player.Process(video.dovi.profile)) + !Skin.HasSetting(avdv.HideDVProfileBadge)</visible>
+			<control type="image">
+				<width>56</width>
+				<height>35</height>
+				<texture border="6">flagging/$VAR[MediaFlagTheme]/video/flagbox.png</texture>
+			</control>
+			<control type="label">
+				<width>56</width>
+				<height>35</height>
+				<font>MediaFlagSubtitleFont</font>
+				<textcolor>SelectedColor</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[B]$INFO[Player.Process(video.dovi.profile),P]$INFO[Player.Process(video.dovi.bl.signal.compatibility),.][/B]</label>
+			</control>
+		</control>
+		<control type="group">
+			<width>48</width>
+			<height>35</height>
+			<visible>String.IsEqual(VideoPlayer.HdrType,dolbyvision) + [String.IsEqual(Player.Process(video.dovi.el.type),full) | String.IsEqual(Player.Process(video.dovi.el.type),minimum)]</visible>
+			<control type="image">
+				<width>48</width>
+				<height>35</height>
+				<texture border="6">flagging/$VAR[MediaFlagTheme]/video/flagbox.png</texture>
+			</control>
+			<control type="label">
+				<width>48</width>
+				<height>35</height>
+				<font>MediaFlagSubtitleFont</font>
+				<textcolor>SelectedColor</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[B]$VAR[PlayerDVELTypeVar][/B]</label>
+			</control>
 		</control>
 		<control type="image" id="737">
 			<description>HDR10 Codec</description>
@@ -885,7 +961,21 @@
 			<height>35</height>
 			<texture>flagging/$VAR[MediaFlagTheme]/video/hdr10.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(VideoPlayer.HdrType,hdr10)</visible>
+			<visible>String.IsEqual(VideoPlayer.HdrType,hdr10) | Integer.IsEqual(Player.Process(video.source.additional.hdr.type.raw),1)</visible>
+		</control>
+		<control type="image">
+			<description>HDR10+</description>
+			<width>91</width>
+			<height>35</height>
+			<texture>flagging/$VAR[MediaFlagTheme]/video/hdr10plus.png</texture>
+			<visible>String.IsEqual(VideoPlayer.HdrType,hdr10plus) | Integer.IsEqual(Player.Process(video.source.additional.hdr.type.raw),2)</visible>
+		</control>
+		<control type="image">
+			<description>HDR Vivid</description>
+			<width>122</width>
+			<height>35</height>
+			<texture>flagging/$VAR[MediaFlagTheme]/video/hdrvivid.png</texture>
+			<visible>String.IsEqual(VideoPlayer.HdrType,hdrvivid) | Integer.IsEqual(Player.Process(video.source.additional.hdr.type.raw),5)</visible>
 		</control>
 		<control type="image" id="757">
 			<description>HLG Codec</description>
@@ -893,7 +983,7 @@
 			<height>35</height>
 			<texture>flagging/$VAR[MediaFlagTheme]/video/hlg.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(VideoPlayer.HdrType,hlg)</visible>
+			<visible>String.IsEqual(VideoPlayer.HdrType,hlg) | Integer.IsEqual(Player.Process(video.source.additional.hdr.type.raw),4)</visible>
 		</control>
 		<control type="image" id="639">
 			<description>Xvid Codec</description>
@@ -1095,7 +1185,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/dts.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(VideoPlayer.AudioCodec,dca) + ![String.Contains(Player.FilenameAndPath,dtses) | String.Contains(Player.FilenameAndPath,dts-es)]</visible>
+			<visible>[String.IsEqual(VideoPlayer.AudioCodec,dca) | String.IsEqual(VideoPlayer.AudioCodec,dts) | String.IsEqual(VideoPlayer.AudioCodec,dts_es) | String.IsEqual(VideoPlayer.AudioCodec,dts_96_24) | String.IsEqual(VideoPlayer.AudioCodec,dts_express)] + ![String.IsEqual(VideoPlayer.AudioCodec,dts_es) | String.Contains(Player.FilenameAndPath,dtses) | String.Contains(Player.FilenameAndPath,dts-es)]</visible>
 		</control>
 		<control type="image" id="744">
 			<description>DTS-ES Codec</description>
@@ -1104,7 +1194,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/dtses.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(VideoPlayer.AudioCodec,dca) + [String.Contains(Player.FilenameAndPath,dtses) | String.Contains(Player.FilenameAndPath,dts-es)]</visible>
+			<visible>[String.IsEqual(VideoPlayer.AudioCodec,dca) | String.IsEqual(VideoPlayer.AudioCodec,dts) | String.IsEqual(VideoPlayer.AudioCodec,dts_es) | String.IsEqual(VideoPlayer.AudioCodec,dts_96_24) | String.IsEqual(VideoPlayer.AudioCodec,dts_express)] + [String.IsEqual(VideoPlayer.AudioCodec,dts_es) | String.Contains(Player.FilenameAndPath,dtses) | String.Contains(Player.FilenameAndPath,dts-es)]</visible>
 		</control>
 		<control type="image" id="683">
 			<description>PCM Codec</description>
@@ -1113,7 +1203,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/pcm.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(VideoPlayer.AudioCodec,pcm_s16be) | String.Contains(VideoPlayer.AudioCodec,pcm_s16le) | String.Contains(VideoPlayer.AudioCodec,pcm_u8) | String.Contains(VideoPlayer.AudioCodec,pcm_bluray)</visible>
+			<visible>String.StartsWith(VideoPlayer.AudioCodec,pcm)</visible>
 		</control>
 		<control type="image" id="655">
 			<description>AAC Codec</description>
@@ -1140,7 +1230,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/eac3.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(VideoPlayer.AudioCodec,eac3) + !String.Contains(Player.FilenameAndPath,.atmos)</visible>
+			<visible>String.Contains(VideoPlayer.AudioCodec,eac3) + ![String.Contains(VideoPlayer.AudioCodec,atmos) | String.Contains(Player.FilenameAndPath,.atmos)]</visible>
 		</control>
 		<control type="image" id="669">
 			<description>TrueHD Codec</description>
@@ -1149,7 +1239,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/truehd.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>String.Contains(VideoPlayer.AudioCodec,truehd) + !String.Contains(Player.FilenameAndPath,.atmos)</visible>
+			<visible>String.Contains(VideoPlayer.AudioCodec,truehd) + ![String.Contains(VideoPlayer.AudioCodec,atmos) | String.Contains(Player.FilenameAndPath,.atmos)]</visible>
 		</control>
 		<control type="image" id="723">
 			<description>Atmos Codec</description>
@@ -1158,7 +1248,7 @@
 			<aspectratio>stretch</aspectratio>
 			<texture>flagging/$VAR[MediaFlagTheme]/audio/atmos.png</texture>
 			<!--<fadetime>MediaFlagsCrossfadeTime</fadetime>-->
-			<visible>[String.Contains(VideoPlayer.AudioCodec,eac3) | String.Contains(VideoPlayer.AudioCodec,truehd)] + String.Contains(Player.FilenameAndPath,.atmos)</visible>
+			<visible>[String.Contains(VideoPlayer.AudioCodec,eac3) | String.Contains(VideoPlayer.AudioCodec,truehd)] + [String.Contains(VideoPlayer.AudioCodec,atmos) | String.Contains(Player.FilenameAndPath,.atmos)]</visible>
 		</control>
 		<control type="image" id="657">
 			<description>WMA STD V2/WMA Codec</description>

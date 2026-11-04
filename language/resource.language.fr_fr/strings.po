@@ -1625,6 +1625,115 @@ msgctxt "#31725"
 msgid "Use Coloured Categories"
 msgstr "Utiliser des catégories colorées"
 
+#: Rapier avdvplus
+msgctxt "#31740"
+msgid "Video output · avdvplus"
+msgstr "Sortie vidéo · avdvplus"
+
+msgctxt "#31741"
+msgid "No Dolby Vision stream"
+msgstr "Pas de flux Dolby Vision"
+
+msgctxt "#31742"
+msgid "Profile"
+msgstr "Profil"
+
+msgctxt "#31743"
+msgid "Layers"
+msgstr "Couches"
+
+msgctxt "#31744"
+msgid "Level"
+msgstr "Niveau"
+
+msgctxt "#31745"
+msgid "Metadata"
+msgstr "Métadonnées"
+
+msgctxt "#31747"
+msgid "Mastering"
+msgstr "Mastering"
+
+msgctxt "#31748"
+msgid "Scene"
+msgstr "Scène"
+
+msgctxt "#31749"
+msgid "Active area"
+msgstr "Zone active"
+
+msgctxt "#31750"
+msgid "Source"
+msgstr "Source"
+
+msgctxt "#31751"
+msgid "limited"
+msgstr "limité"
+
+msgctxt "#31752"
+msgid "Colour"
+msgstr "Couleur"
+
+msgctxt "#31753"
+msgid "Format"
+msgstr "Format"
+
+msgctxt "#31754"
+msgid "Black bars"
+msgstr "Bandes noires"
+
+msgctxt "#31755"
+msgid "Amlogic output"
+msgstr "Sortie Amlogic"
+
+msgctxt "#31756"
+msgid "Display mode"
+msgstr "Mode d'affichage"
+
+msgctxt "#31757"
+msgid "Video source"
+msgstr "Source vidéo"
+
+msgctxt "#31758"
+msgid "VS10 mode"
+msgstr "Mode VS10"
+
+msgctxt "#31760"
+msgid "Display HDR"
+msgstr "HDR écran"
+
+msgctxt "#31761"
+msgid "Live bitrate"
+msgstr "Débit instantané"
+
+msgctxt "#31762"
+msgid "Buffers"
+msgstr "Tampons"
+
+msgctxt "#31763"
+msgid "dropped"
+msgstr "perdues"
+
+msgctxt "#31770"
+msgid "Primaries"
+msgstr "Primaires"
+
+msgctxt "#31772"
+msgid "bed"
+msgstr "bed"
+
+msgctxt "#31780"
+msgid "avdvplus (CoreELEC)"
+msgstr "avdvplus (CoreELEC)"
+
+msgctxt "#31781"
+msgid "Hide the avdvplus panel in player process info"
+msgstr "Masquer le panneau avdvplus des infos de lecture"
+
+msgctxt "#31782"
+msgid "Hide the Dolby Vision profile badge"
+msgstr "Masquer le badge du profil Dolby Vision"
+
 msgctxt "#31900"
 msgid "Select multi image path for tv channels / recordings"
 msgstr "Sélectionner le chemin multi-images pour les chaînes / enregistrements TV"

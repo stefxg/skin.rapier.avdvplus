@@ -2274,6 +2274,115 @@ msgctxt "#31725"
 msgid "Use Coloured Categories"
 msgstr ""
 
+#: Rapier avdvplus
+msgctxt "#31740"
+msgid "Video output · avdvplus"
+msgstr ""
+
+msgctxt "#31741"
+msgid "No Dolby Vision stream"
+msgstr ""
+
+msgctxt "#31742"
+msgid "Profile"
+msgstr ""
+
+msgctxt "#31743"
+msgid "Layers"
+msgstr ""
+
+msgctxt "#31744"
+msgid "Level"
+msgstr ""
+
+msgctxt "#31745"
+msgid "Metadata"
+msgstr ""
+
+msgctxt "#31747"
+msgid "Mastering"
+msgstr ""
+
+msgctxt "#31748"
+msgid "Scene"
+msgstr ""
+
+msgctxt "#31749"
+msgid "Active area"
+msgstr ""
+
+msgctxt "#31750"
+msgid "Source"
+msgstr ""
+
+msgctxt "#31751"
+msgid "limited"
+msgstr ""
+
+msgctxt "#31752"
+msgid "Colour"
+msgstr ""
+
+msgctxt "#31753"
+msgid "Format"
+msgstr ""
+
+msgctxt "#31754"
+msgid "Black bars"
+msgstr ""
+
+msgctxt "#31755"
+msgid "Amlogic output"
+msgstr ""
+
+msgctxt "#31756"
+msgid "Display mode"
+msgstr ""
+
+msgctxt "#31757"
+msgid "Video source"
+msgstr ""
+
+msgctxt "#31758"
+msgid "VS10 mode"
+msgstr ""
+
+msgctxt "#31760"
+msgid "Display HDR"
+msgstr ""
+
+msgctxt "#31761"
+msgid "Live bitrate"
+msgstr ""
+
+msgctxt "#31762"
+msgid "Buffers"
+msgstr ""
+
+msgctxt "#31763"
+msgid "dropped"
+msgstr ""
+
+msgctxt "#31770"
+msgid "Primaries"
+msgstr ""
+
+msgctxt "#31772"
+msgid "bed"
+msgstr ""
+
+msgctxt "#31780"
+msgid "avdvplus (CoreELEC)"
+msgstr ""
+
+msgctxt "#31781"
+msgid "Hide the avdvplus panel in player process info"
+msgstr ""
+
+msgctxt "#31782"
+msgid "Hide the Dolby Vision profile badge"
+msgstr ""
+
 # empty strings from id 31726 to 31899
 
 #: /720p/includes_SkinSettingsMedia.xml

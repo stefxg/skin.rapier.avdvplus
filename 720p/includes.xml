@@ -15,6 +15,7 @@
 	<include file="includes_MediaFlags.xml"/>
 	<include file="includes_MenuBar.xml"/>
 	<include file="includes_Omega.xml"/>
+	<include file="includes_Avdvplus.xml"/>
 	<include file="includes_PVR.xml"/>
 	<include file="includes_Scrollbars.xml"/>
 	<include file="includes_SkinSettingsBackgrounds.xml"/>
