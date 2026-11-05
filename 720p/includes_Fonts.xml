@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+	<!-- avdvplus: Art Deco home menu font (Poiret One, SIL OFL 1.1) for the Default fontset -->
+	<include name="AvdvHomeCategoryLabelFonts">
+		<font>
+			<name>HomeCategoryLabelUnfocusFont</name>
+			<filename>PoiretOne-Regular.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+			<aspect>0.86</aspect>
+		</font>
+		<font>
+			<name>HomeCategoryLabelFocusFont</name>
+			<filename>PoiretOne-Regular.ttf</filename>
+			<size>48</size>
+			<style>uppercase</style>
+			<aspect>0.86</aspect>
+		</font>
+		<font>
+			<name>HomeCategoryLabel2Font</name>
+			<filename>PoiretOne-Regular.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+			<aspect>0.88</aspect>
+		</font>
+		<font>
+			<name>HomeSubMenuBtnFont</name>
+			<filename>PoiretOne-Regular.ttf</filename>
+			<size>15</size>
+			<style>uppercase</style>
+			<aspect>0.9</aspect>
+		</font>
+	</include>
+
 	<include name="HomeCategoryLabelFonts">
 		<font>
 			<name>HomeCategoryLabelUnfocusFont</name>

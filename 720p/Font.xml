@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
 	<fontset id="Default" idloc="571">
-		<include>HomeCategoryLabelFonts</include>
+		<include>AvdvHomeCategoryLabelFonts</include>
 		
 		<font>
 			<name>font13</name>
@@ -308,11 +308,6 @@
 			<size>14</size>
 		</font>
 		
-		<font>
-			<name>HomeSubMenuBtnFont</name>
-			<filename>gui.ttf</filename>
-			<size>13</size>
-		</font>
 		<font>
 			<name>DialogTitleFont</name>
 			<filename>gui.ttf</filename>
