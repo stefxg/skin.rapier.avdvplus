@@ -1,4 +1,13 @@
 ------------------------
+[B]21.0.19 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Accueil : police Art déco Poiret One (Google Fonts, licence SIL OFL 1.1, fonts/PoiretOne-Regular.ttf)
+  pour les catégories du menu (36 / 48 sélectionnée, resserrée à 86 % pour que « ALIMENTATION » tienne)
+  et pour les sous-menus (15, resserrée à 90 % : les libellés longs ne sont plus tronqués).
+- Concerne le jeu de polices « Défaut » (include AvdvHomeCategoryLabelFonts) ; les autres jeux de polices
+  (Arial, Homizio Nova, multilingual, Noto Sans, Raleway) sont inchangés.
+
+------------------------
 [B]21.0.18 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Accueil : nouvelle moulure dorée du bandeau (variante N3) : filet fin ponctué de losanges, 21 px en 1080p,
