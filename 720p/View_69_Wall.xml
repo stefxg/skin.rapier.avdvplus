@@ -457,6 +457,71 @@
 					<texture border="8">panels/panel.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
+				<!-- Rapier avdvplus : liseré bleu (7 px, comme celui de l'affiche agrandie) sur les 3 côtés qui ne touchent pas l'affiche -->
+				<control type="image">
+					<description>Liseré haut</description>
+					<left>0</left>
+					<top>0</top>
+					<width>487</width>
+					<height>7</height>
+					<texture colordiffuse="A91060B1">white.png</texture>
+				</control>
+				<control type="image">
+					<description>Liseré bas</description>
+					<left>0</left>
+					<top>242</top>
+					<width>487</width>
+					<height>7</height>
+					<texture colordiffuse="A91060B1">white.png</texture>
+				</control>
+				<control type="image">
+					<description>Liseré droit (panneau à droite de l'affiche)</description>
+					<left>480</left>
+					<top>7</top>
+					<width>7</width>
+					<height>235</height>
+					<texture colordiffuse="A91060B1">white.png</texture>
+					<visible>[Container(69).Column(0) | Container(69).Column(1) | Container(69).Column(2) | Container(69).Column(3) | Container(69).Column(4) | Container(69).Column(5)]</visible>
+				</control>
+				<control type="image">
+					<description>Liseré gauche (panneau à gauche de l'affiche)</description>
+					<left>0</left>
+					<top>7</top>
+					<width>7</width>
+					<height>235</height>
+					<texture colordiffuse="A91060B1">white.png</texture>
+					<visible>[Container(69).Column(6) | Container(69).Column(7) | Container(69).Column(8) | Container(69).Column(9) | Container(69).Column(10)]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>487</width>
+					<height>1</height>
+					<texture colordiffuse="CC1374D8">white.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>248</top>
+					<width>487</width>
+					<height>1</height>
+					<texture colordiffuse="CC1374D8">white.png</texture>
+				</control>
+				<control type="image">
+					<left>486</left>
+					<top>0</top>
+					<width>1</width>
+					<height>249</height>
+					<texture colordiffuse="CC1374D8">white.png</texture>
+					<visible>[Container(69).Column(0) | Container(69).Column(1) | Container(69).Column(2) | Container(69).Column(3) | Container(69).Column(4) | Container(69).Column(5)]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1</width>
+					<height>249</height>
+					<texture colordiffuse="CC1374D8">white.png</texture>
+					<visible>[Container(69).Column(6) | Container(69).Column(7) | Container(69).Column(8) | Container(69).Column(9) | Container(69).Column(10)]</visible>
+				</control>
 				
 				<control type="image">
 					<description>Content Background</description>
