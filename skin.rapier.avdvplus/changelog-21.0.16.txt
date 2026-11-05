@@ -1,4 +1,11 @@
 ------------------------
+[B]21.0.16 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Accueil : moulure dorée Art déco (losanges et chevrons) posée sur le bord haut du bandeau du menu,
+  à la place du filet doré uni (media/gui/home-menu-bar-trim.png, 1920 x 30, motif répété sans raccord
+  visible, éclat de l'or réduit de 13 %).
+
+------------------------
 [B]21.0.15 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Accueil : nouveau bandeau du menu du bas, frise Art déco bleu nuit et or assortie au fond par défaut
