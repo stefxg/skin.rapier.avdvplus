@@ -1,4 +1,10 @@
 ------------------------
+[B]21.0.7 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Vue Mur, style Moyen : fond du panneau d'infos étendues en aplat noir (même opacité qu'avant) au lieu de
+  panel.png, dont le liseré gris de 1 px formait une couture visible contre le liseré bleu de l'affiche.
+
+------------------------
 [B]21.0.6 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Vue Mur, style Moyen : liseré bleu (même épaisseur et même teinte que celui de l'affiche agrandie)
