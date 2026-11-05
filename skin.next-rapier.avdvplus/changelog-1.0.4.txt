@@ -1,4 +1,18 @@
 ------------------------
+[B]1.0.4 (05-November-26) - Next-Rapier-avdvplus[/B]
+------------------------
+- Cadres Tron « B+ » pour tous les menus, dialogues et listes de choix (media/panels/dialog-background*.png) :
+  fond noir translucide à lignes de balayage et lueur cyan en haut, coins haut-gauche / bas-droit coupés à 45°
+  avec double chanfrein (trait blanc épais + ligne cyan fine), traits pleins prolongés en pointillés,
+  équerres de lumière, arc d'anneau (disque d'identité), règle graduée, pastilles, pistes de circuit à 45°
+  terminées par un nœud, barres de données segmentées, micro-code « N-R 07 », hachures.
+  Les motifs fins restent dans les angles non étirés du 9-slice : aucune déformation quelle que soit la taille.
+- Panneaux (media/panels/panel.png : panneau d'infos du Mur, barre de lecture, infos de lecture, widgets) :
+  liseré cyan, coins coupés lumineux et équerres.
+- Titres de dialogue (DialogTitleFont, jeu de polices Défaut) en Bruno Ace SC, resserrée à 86 %.
+- Générateur : _tools/make_tron_frames.py.
+
+------------------------
 [B]1.0.3 (05-November-26) - Next-Rapier-avdvplus[/B]
 ------------------------
 - Nouveau fond par défaut « Cité néon » : ville futuriste et grille cyan (image générée par ChatGPT,
