@@ -21,6 +21,13 @@
 	<expression name="AvdvWallMedium">[Container.Content(Movies) + Skin.String(MoviesWallStyle,3)] | [Container.Content(TVShows) + Skin.String(TVShowsWallStyle,3)]</expression>
 
 	<!-- ============================================================ variables -->
+	<!-- Global background: built-in skin image choice (Settings > Skin > Backgrounds > Global) -->
+	<variable name="AvdvBuiltinBGLabelVar">
+		<value condition="String.IsEmpty(Skin.String(CustomDefaultBGPath)) | String.IsEqual(Skin.String(CustomDefaultBGPath),background-default.png)">$LOCALIZE[31786]</value>
+		<value condition="String.IsEqual(Skin.String(CustomDefaultBGPath),background-default-stars.png)">$LOCALIZE[31787]</value>
+		<value>$LOCALIZE[31788]</value>
+	</variable>
+
 	<variable name="AvdvHdrTypeVar">
 		<value condition="!String.IsEmpty(Player.Process(video.source.hdr.type))">$INFO[Player.Process(video.source.hdr.type)]$INFO[Player.Process(video.source.additional.hdr.type), + ,]$VAR[AvdvDualTrackVar, (,)]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.HdrType)">$INFO[VideoPlayer.HdrType]</value>

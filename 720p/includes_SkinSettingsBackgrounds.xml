@@ -273,6 +273,14 @@
 					<onup>4101</onup>
 					<ondown>4100</ondown>
 					<onleft>1949</onleft>
+					<control type="button" id="4203">
+						<description>Built-in skin image (avdvplus): Earth / Starry sky</description>
+						<include>SettingsContentBtn</include>
+						<label>$LOCALIZE[31785]: [COLOR=DefaultColor2]$VAR[AvdvBuiltinBGLabelVar][/COLOR]</label>
+						<onclick condition="String.IsEmpty(Skin.String(CustomDefaultBGPath)) | String.IsEqual(Skin.String(CustomDefaultBGPath),background-default.png)">Skin.SetString(CustomDefaultBGPath,background-default-stars.png)</onclick>
+						<onclick condition="!String.IsEmpty(Skin.String(CustomDefaultBGPath)) + !String.IsEqual(Skin.String(CustomDefaultBGPath),background-default.png)">Skin.SetString(CustomDefaultBGPath,background-default.png)</onclick>
+						<visible>Skin.String(CustomDefaultBGType,1) | String.IsEmpty(Skin.String(CustomDefaultBGType))</visible>
+					</control>
 					<control type="button" id="4200">
 						<description>Single Image Path</description>
 						<include>SettingsContentBtn</include>

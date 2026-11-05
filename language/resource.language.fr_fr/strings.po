@@ -1762,6 +1762,22 @@ msgctxt "#31784"
 msgid "Medium"
 msgstr "Moyen"
 
+msgctxt "#31785"
+msgid "Skin image"
+msgstr "Image de la skin"
+
+msgctxt "#31786"
+msgid "Cinema - Earth"
+msgstr "Cinéma - Terre"
+
+msgctxt "#31787"
+msgid "Cinema - Starry sky"
+msgstr "Cinéma - Ciel étoilé"
+
+msgctxt "#31788"
+msgid "Custom"
+msgstr "Personnalisée"
+
 msgctxt "#31900"
 msgid "Select multi image path for tv channels / recordings"
 msgstr "Sélectionner le chemin multi-images pour les chaînes / enregistrements TV"
