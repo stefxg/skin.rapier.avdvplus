@@ -181,7 +181,7 @@
 			
 			<control type="group">
 				<animation effect="slide" end="0,-22" time="0" condition="Skin.HasSetting(avdv.HideLibraryTopBar)">Conditional</animation>
-				<visible>Control.HasFocus(69) + System.IdleTime(1) + [[Container.Content(Movies) + Skin.HasSetting(HideMoviesWallExtendedInfoPanel)] | [Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallExtendedInfoPanel)]] + !String.IsEmpty(ListItem.Title) + !$EXP[AvdvWallMedium]</visible>
+				<visible>Control.HasFocus(69) + System.IdleTime(1) + [[Container.Content(Movies) + Skin.HasSetting(HideMoviesWallExtendedInfoPanel)] | [Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallExtendedInfoPanel)]] + !String.IsEmpty(ListItem.Title) + !$EXP[AvdvWallMedium] + !$EXP[AvdvWallNormal]</visible>
 				<depth>DepthContent+</depth>
 				<left>-3</left>
 				<top>43</top>
@@ -650,6 +650,283 @@
 					<description>Media Flags Area</description>
 					<left>13</left>
 					<top>201</top>
+					<width>461</width>
+					<height>35</height>
+					<itemgap>5</itemgap>
+					<align>center</align>
+					<usecontrolcoords>true</usecontrolcoords>
+					<orientation>horizontal</orientation>
+					<include>MediaFlagFadeAnim</include>
+					<visible>Container.Content(TVShows) + !Skin.HasSetting(DisableMediaFlags)</visible>
+					<control type="group">
+						<visible>System.AddonIsEnabled(plugin.video.themoviedb.helper) + !Skin.HasSetting(EnableNextAiredStatusMediaFlag)</visible>
+						<width>104</width>
+						<control type="image">
+							<width>104</width>
+							<height>35</height>
+							<texture border="6">flagging/$VAR[MediaFlagTheme]/flag-big-bg.png</texture>
+							<animation effect="fade" time="200">VisibleChange</animation>
+							<visible>![String.IsEmpty(Container(5055).ListItem.Status) + String.IsEmpty(ListItem.Status)]</visible>
+						</control>
+						<control type="label">
+							<description>Next Aired Status</description>
+							<left>2</left>
+							<width>100</width>
+							<height>35</height>
+							<font>NextAiredTimeFont</font>
+							<textcolor>SelectedColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$VAR[TVShowStatusVar]</label>
+						</control>
+					</control>
+					<control type="group">
+						<visible>!String.IsEmpty(ListItem.Studio)</visible>
+						<width>58</width>
+						<control type="image">
+							<width>58</width>
+							<height>35</height>
+							<texture border="6">flagging/$VAR[MediaFlagTheme]/flag-bg.png</texture>
+						</control>
+						<control type="image">
+							<description>Studio Flag</description>
+							<width>58</width>
+							<height>35</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio].png</texture>
+						</control>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Rapier avdvplus : panneau d'infos étendues, style Normal (8 x 3)</description>
+				<animation effect="slide" end="0,-22" time="0" condition="Skin.HasSetting(avdv.HideLibraryTopBar)">Conditional</animation>
+				<visible>Control.HasFocus(69) + System.IdleTime(1) + [[Container.Content(Movies) + Skin.HasSetting(HideMoviesWallExtendedInfoPanel)] | [Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallExtendedInfoPanel)]] + !String.IsEmpty(ListItem.Title) + $EXP[AvdvWallNormal]</visible>
+				<depth>DepthContent+</depth>
+				<left>0</left>
+				<top>0</top>
+				
+
+				
+				<!-- Rapier avdvplus : style Normal 8 x 3, panneau collé au liseré bleu (colonnes 0-3 : à droite, 4-7 : à gauche) -->
+				<animation effect="slide" end="238,0" condition="Container(69).Column(0)">Conditional</animation>
+				<animation effect="slide" end="363,0" condition="Container(69).Column(1)">Conditional</animation>
+				<animation effect="slide" end="523,0" condition="Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="683,0" condition="Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="118,0" condition="Container(69).Column(4)">Conditional</animation>
+				<animation effect="slide" end="278,0" condition="Container(69).Column(5)">Conditional</animation>
+				<animation effect="slide" end="438,0" condition="Container(69).Column(6)">Conditional</animation>
+				<animation effect="slide" end="555,0" condition="Container(69).Column(7)">Conditional</animation>
+				<animation effect="slide" end="0,45" condition="Container(69).Row(0)">Conditional</animation>
+				<animation effect="slide" end="0,222" condition="Container(69).Row(1)">Conditional</animation>
+				<animation effect="slide" end="0,391" condition="Container(69).Row(2)">Conditional</animation>
+				
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="300"/>
+					<effect type="zoom" end="100" start="50" time="400" tween="back" easing="out" center="243,164"/>
+				</animation>
+				
+				<control type="image">
+					<description>Fond du panneau : aplat sans bordure (panel.png a un liseré gris de 1 px qui formait une couture contre l'affiche)</description>
+					<width>487</width>
+					<height>329</height>
+					<texture colordiffuse="B3000000">white.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<!-- Rapier avdvplus : liseré bleu (7 px, comme celui de l'affiche agrandie) sur les 3 côtés qui ne touchent pas l'affiche -->
+				<control type="image">
+					<description>Liseré haut</description>
+					<left>0</left>
+					<top>0</top>
+					<width>487</width>
+					<height>7</height>
+					<texture colordiffuse="A91060B1">white.png</texture>
+				</control>
+				<control type="image">
+					<description>Liseré bas</description>
+					<left>0</left>
+					<top>322</top>
+					<width>487</width>
+					<height>7</height>
+					<texture colordiffuse="A91060B1">white.png</texture>
+				</control>
+				<control type="image">
+					<description>Liseré droit (panneau à droite de l'affiche)</description>
+					<left>480</left>
+					<top>7</top>
+					<width>7</width>
+					<height>315</height>
+					<texture colordiffuse="A91060B1">white.png</texture>
+					<visible>[Container(69).Column(0) | Container(69).Column(1) | Container(69).Column(2) | Container(69).Column(3)]</visible>
+				</control>
+				<control type="image">
+					<description>Liseré gauche (panneau à gauche de l'affiche)</description>
+					<left>0</left>
+					<top>7</top>
+					<width>7</width>
+					<height>315</height>
+					<texture colordiffuse="A91060B1">white.png</texture>
+					<visible>[Container(69).Column(4) | Container(69).Column(5) | Container(69).Column(6) | Container(69).Column(7)]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>487</width>
+					<height>1</height>
+					<texture colordiffuse="CC1374D8">white.png</texture>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>328</top>
+					<width>487</width>
+					<height>1</height>
+					<texture colordiffuse="CC1374D8">white.png</texture>
+				</control>
+				<control type="image">
+					<left>486</left>
+					<top>0</top>
+					<width>1</width>
+					<height>329</height>
+					<texture colordiffuse="CC1374D8">white.png</texture>
+					<visible>[Container(69).Column(0) | Container(69).Column(1) | Container(69).Column(2) | Container(69).Column(3)]</visible>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1</width>
+					<height>329</height>
+					<texture colordiffuse="CC1374D8">white.png</texture>
+					<visible>[Container(69).Column(4) | Container(69).Column(5) | Container(69).Column(6) | Container(69).Column(7)]</visible>
+				</control>
+				
+				<control type="image">
+					<description>Content Background</description>
+					<left>8</left>
+					<top>8</top>
+					<width>471</width>
+					<height>313</height>
+					<texture border="4">panels/panel-content-border2.png</texture>
+					<include>ListInfoViewContentBackgroundFadeAnim</include>
+				</control>
+				
+				<control type="image">
+					<left>13</left>
+					<top>12</top>
+					<width>461</width>
+					<height>25</height>
+					<texture border="4">panels/panel3.png</texture>
+					<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+				</control>
+				
+				<control type="image">
+					<left>13</left>
+					<top>40</top>
+					<width>461</width>
+					<height>212</height>
+					<texture border="4">panels/panel3.png</texture>
+					<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+				</control>
+				
+				<control type="image">
+					<left>13</left>
+					<top>256</top>
+					<width>461</width>
+					<height>25</height>
+					<texture border="4">panels/panel3.png</texture>
+					<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+				</control>
+				
+				<control type="image">
+					<left>13</left>
+					<top>285</top>
+					<width>461</width>
+					<height>25</height>
+					<texture border="4">panels/panel3.png</texture>
+					<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+					<visible>ListItem.IsCollection</visible>
+				</control>
+				
+				<control type="label">
+					<description>Genre</description>
+					<left>18</left>
+					<top>12</top>
+					<width>451</width>
+					<height>25</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>MediaInfoFont2</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$VAR[MovieGenre][/UPPERCASE]</label>
+					<scroll>true</scroll>
+				</control>
+				
+				<control type="textbox">
+					<description>Plot</description>
+					<left>18</left>
+					<top>44</top>
+					<width>451</width>
+					<height>204</height>
+					<font>SettingsContentFont2</font>
+					<textcolor>MediaInfoColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>justify</align>
+					<label fallback="31203">$VAR[WallPlot]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
+					<include>ControlsOpenCloseAnim</include>
+				</control>
+				
+				<control type="label">
+					<description>Media Info</description>
+					<left>14</left>
+					<top>256</top>
+					<width>459</width>
+					<height>25</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<include>ListInfoViewCatLabel</include>
+					<label>$VAR[WallInfolabel]</label>
+				</control>
+				
+				<control type="label">
+					<description>Media Info</description>
+					<left>18</left>
+					<top>285</top>
+					<width>451</width>
+					<height>25</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<include>ListInfoViewCatLabel</include>
+					<label>$VAR[MovieYear,$LOCALIZE[345]: [COLOR=MediaInfoItemColor2],[/COLOR]]</label>
+					<visible>ListItem.IsCollection</visible>
+				</control>
+				
+				<control type="grouplist">
+					<description>Media Flags Area</description>
+					<left>13</left>
+					<top>285</top>
+					<width>461</width>
+					<height>35</height>
+					<itemgap>5</itemgap>
+					<align>center</align>
+					<usecontrolcoords>true</usecontrolcoords>
+					<orientation>horizontal</orientation>
+					<include>MediaFlagFadeAnim</include>
+					<visible>Container.Content(Movies) + !Skin.HasSetting(DisableMediaFlags)</visible>
+					<include>VideoSourceMediaFlags</include>
+					<include>VideoCodecMediaFlags</include>
+					<include>AudioMediaFlags</include>
+					<include>AspectMediaFlags</include>
+					<include>SubtitleMediaFlags</include>
+				</control>
+				
+				<control type="grouplist">
+					<description>Media Flags Area</description>
+					<left>13</left>
+					<top>285</top>
 					<width>461</width>
 					<height>35</height>
 					<itemgap>5</itemgap>
