@@ -81,20 +81,19 @@
 	</include>
 
 	<include name="HomeMenuPaneImage">
+		<!-- avdvplus: Art Deco navy-and-gold frieze (matches the default global background) -->
 		<control type="image">
 			<width>ScreenWidth</width>
 			<height>114</height>
-			<texture border="0,8,0,0">gui/home-menu-bar-background.png</texture>
+			<texture>gui/home-menu-bar-artdeco.png</texture>
 			<aspectratio>stretch</aspectratio>
-			<animation effect="fade" end="85" condition="true">Conditional</animation>
 		</control>
 
 		<control type="image">
-			<top>-5</top>
+			<description>Gold top line</description>
 			<width>ScreenWidth</width>
-			<height>8</height>
-			<texture>gui/bottom-bar-top.png</texture>
-			<animation effect="fade" end="30" condition="true">Conditional</animation> 
+			<height>2</height>
+			<texture colordiffuse="FFD1944A">white.png</texture>
 		</control>
 	</include>
 
@@ -103,7 +102,7 @@
 			<top>2</top>
 			<width>ScreenWidth</width>
 			<height>112</height>
-			<texture>gui/bottom-bar-overlay.png</texture>
+			<texture>gui/home-menu-bar-overlay-navy.png</texture>
 			<animation effect="fade" end="68" condition="true">Conditional</animation>
 		</control>
 	</include>
