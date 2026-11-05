@@ -1,4 +1,11 @@
 ------------------------
+[B]21.0.9 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Nouveau fond global par défaut (media/background-default.png, 1920 x 1080) : salle de cinéma Art déco
+  bleu nuit et or projetant un ciel étoilé. Utilisé partout où aucun fond personnalisé n'est choisi
+  (Réglages de la skin > Arrière-plans > Global > Défaut) et comme image de repli des vues.
+
+------------------------
 [B]21.0.8 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Vue Mur, style Normal (8 x 3) : même panneau d'infos étendues que le style Moyen.
