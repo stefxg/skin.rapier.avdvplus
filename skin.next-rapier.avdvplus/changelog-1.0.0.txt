@@ -1,0 +1,8 @@
+------------------------
+[B]1.0.0 (05-November-26) - Next-Rapier-avdvplus[/B]
+------------------------
+- Création de Next-Rapier-avdvplus (skin.next-rapier.avdvplus), version futuriste de Rapier avdvplus.
+- Base : Rapier avdvplus 21.0.21 (portage Kodi 21 Omega, fonctions CoreELEC avdvplus, vue Mur Moyen,
+  panneaux étendus, réglages par défaut). Historique complet : https://github.com/stefxg/skin.rapier.avdvplus
+- S'installe à côté de Rapier avdvplus : identifiant et réglages indépendants.
+- Le nouveau visuel (noir, néons rouges, lignes géométriques) arrive dans les versions suivantes.
