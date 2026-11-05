@@ -11,6 +11,7 @@ Exécuter depuis la racine du dépôt :
 
 Les thèmes `themes/` (orange, red, flat) ne sont pas inclus : ils doivent être compilés en `.xbt` avec TexturePacker.
 | `publish_repo.py . <worktree_branche_repo>` | Génère le dépôt Kodi (addons.xml, md5, zips, icônes) à publier sur la branche `repo`. |
+| `make_defaults.py <settings.xml> .` | Régénère `720p/includes_AvdvDefaults.xml` (réglages par défaut de la skin) depuis le `settings.xml` d'une box configurée (`/storage/.kodi/userdata/addon_data/skin.rapier.avdvplus/settings.xml`). Incrémenter `DEFAULTS_VERSION` pour réappliquer sur les box existantes. |
 
 ## Dépôt Kodi
 - Add-on dépôt : `_repo/repository.stefxg/` (id `repository.stefxg`).

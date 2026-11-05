@@ -4,6 +4,8 @@
 	<onload condition="System.AddonIsEnabled(script.skin.helper.service)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 	<onload condition="System.AddonIsEnabled(script.skin.helper.service)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onload condition="!String.IsEmpty(Skin.String(SplashScreen))">SetFocus(9001)</onload>
+	<!-- avdvplus : réglages par défaut appliqués au premier démarrage -->
+	<include>AvdvDefaultsOnLoad</include>
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	
 	<controls>

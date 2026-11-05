@@ -3,6 +3,7 @@
 	<include file="Defaults.xml"/>
 	<include file="includes_Addons.xml"/>
 	<include file="includes_Animations.xml"/>
+	<include file="includes_AvdvDefaults.xml"/>
 	<include file="includes_Backgrounds.xml"/>
 	<include file="includes_BreadCrumbs.xml"/>
 	<include file="includes_Dialogs.xml"/>

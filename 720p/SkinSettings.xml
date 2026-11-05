@@ -557,6 +557,7 @@
 							<include>SettingsContentBtn</include>
 							<label>$LOCALIZE[31931]</label>
 							<onclick>Skin.ResetSettings</onclick>
+							<include>AvdvDefaultsOnClick</include>
 							<onclick>Notification($LOCALIZE[31023],$LOCALIZE[31219],3000,)</onclick>
 							<onclick>ReloadSkin()</onclick>
 						</control>

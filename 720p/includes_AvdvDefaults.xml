@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Généré par _tools/make_defaults.py depuis settings_2026-11-05.xml : ne pas éditer à la main. -->
+<!-- Réglages par défaut de la skin (33 options activées, 26 valeurs). -->
+<includes>
+	<include name="AvdvDefaultsOnLoad">
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(applyallsystemcustombg)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(avdv.hidelibrarytopbar)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(contextmenutrailer)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(disable3dwrapview)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(disablemoviestvshowsfanartview)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(disablemoviestvshowslistinfoview)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(disablemoviestvshowslistinfoview2)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(disablemoviestvshowsthumbsinfoview)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(disablemoviestvshowswraplistinfoview)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(disablevideosclearlogo)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hideaddonscategory)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hideaudiolanguagemediaflag)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidedialogclosebtns)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidefavouriteswidget)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidegamescategory)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidegameswidget)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidegeneralcategory)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidehomecategoryicons)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hideincinemashomewidget)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidemenubar)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidemovieswallextendedinfopanel)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidemovieswallinfopanel)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidemusiccategory)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidenowplayinghomepanel)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidepicturescategory)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hiderecentlyaddedhomepanel)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidesubtitlemediaflag)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidetopbar)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidetopbardate)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidetvshowswallextendedinfopanel)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hidetvshowswallinfopanel)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(hideweatherhomepanel)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(wallviewverticalnavigation)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(CustomDefaultBGPath,background-default.png)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(commonliststyle,2)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom10paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom11paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom12paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom13paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom14paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom15paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom16paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom1paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom2paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom3paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom4paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom5paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom6paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom7paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom8paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custom9paneltype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(custommoviesbgtype,2)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(customsystembgtype,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(customvideosbgtype,2)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(fanartbrightnessvalue,30)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(globalbrightnessvalue,100)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(movieswallstyle,3)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(systembrightnessvalue,0)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetString(tvshowswallstyle,1)</onload>
+		<onload condition="!Skin.HasSetting(avdv.defaults.v1)">Skin.SetBool(avdv.defaults.v1)</onload>
+	</include>
+
+	<include name="AvdvDefaultsOnClick">
+		<onclick>Skin.SetBool(applyallsystemcustombg)</onclick>
+		<onclick>Skin.SetBool(avdv.hidelibrarytopbar)</onclick>
+		<onclick>Skin.SetBool(contextmenutrailer)</onclick>
+		<onclick>Skin.SetBool(disable3dwrapview)</onclick>
+		<onclick>Skin.SetBool(disablemoviestvshowsfanartview)</onclick>
+		<onclick>Skin.SetBool(disablemoviestvshowslistinfoview)</onclick>
+		<onclick>Skin.SetBool(disablemoviestvshowslistinfoview2)</onclick>
+		<onclick>Skin.SetBool(disablemoviestvshowsthumbsinfoview)</onclick>
+		<onclick>Skin.SetBool(disablemoviestvshowswraplistinfoview)</onclick>
+		<onclick>Skin.SetBool(disablevideosclearlogo)</onclick>
+		<onclick>Skin.SetBool(hideaddonscategory)</onclick>
+		<onclick>Skin.SetBool(hideaudiolanguagemediaflag)</onclick>
+		<onclick>Skin.SetBool(hidedialogclosebtns)</onclick>
+		<onclick>Skin.SetBool(hidefavouriteswidget)</onclick>
+		<onclick>Skin.SetBool(hidegamescategory)</onclick>
+		<onclick>Skin.SetBool(hidegameswidget)</onclick>
+		<onclick>Skin.SetBool(hidegeneralcategory)</onclick>
+		<onclick>Skin.SetBool(hidehomecategoryicons)</onclick>
+		<onclick>Skin.SetBool(hideincinemashomewidget)</onclick>
+		<onclick>Skin.SetBool(hidemenubar)</onclick>
+		<onclick>Skin.SetBool(hidemovieswallextendedinfopanel)</onclick>
+		<onclick>Skin.SetBool(hidemovieswallinfopanel)</onclick>
+		<onclick>Skin.SetBool(hidemusiccategory)</onclick>
+		<onclick>Skin.SetBool(hidenowplayinghomepanel)</onclick>
+		<onclick>Skin.SetBool(hidepicturescategory)</onclick>
+		<onclick>Skin.SetBool(hiderecentlyaddedhomepanel)</onclick>
+		<onclick>Skin.SetBool(hidesubtitlemediaflag)</onclick>
+		<onclick>Skin.SetBool(hidetopbar)</onclick>
+		<onclick>Skin.SetBool(hidetopbardate)</onclick>
+		<onclick>Skin.SetBool(hidetvshowswallextendedinfopanel)</onclick>
+		<onclick>Skin.SetBool(hidetvshowswallinfopanel)</onclick>
+		<onclick>Skin.SetBool(hideweatherhomepanel)</onclick>
+		<onclick>Skin.SetBool(wallviewverticalnavigation)</onclick>
+		<onclick>Skin.SetString(CustomDefaultBGPath,background-default.png)</onclick>
+		<onclick>Skin.SetString(commonliststyle,2)</onclick>
+		<onclick>Skin.SetString(custom10paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom11paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom12paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom13paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom14paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom15paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom16paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom1paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom2paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom3paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom4paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom5paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom6paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom7paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom8paneltype,1)</onclick>
+		<onclick>Skin.SetString(custom9paneltype,1)</onclick>
+		<onclick>Skin.SetString(custommoviesbgtype,2)</onclick>
+		<onclick>Skin.SetString(customsystembgtype,1)</onclick>
+		<onclick>Skin.SetString(customvideosbgtype,2)</onclick>
+		<onclick>Skin.SetString(fanartbrightnessvalue,30)</onclick>
+		<onclick>Skin.SetString(globalbrightnessvalue,100)</onclick>
+		<onclick>Skin.SetString(movieswallstyle,3)</onclick>
+		<onclick>Skin.SetString(systembrightnessvalue,0)</onclick>
+		<onclick>Skin.SetString(tvshowswallstyle,1)</onclick>
+		<onclick>Skin.SetBool(avdv.defaults.v1)</onclick>
+	</include>
+</includes>
