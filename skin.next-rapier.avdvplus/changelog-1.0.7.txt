@@ -1,4 +1,23 @@
 ------------------------
+[B]1.0.7 (06-November-26) - Next-Rapier-avdvplus[/B]
+------------------------
+- Contrôles au repos : boutons à contour cyan fin (même silhouette que la sélection A+), séparateurs de listes
+  et de fiches en cyan, rails de défilement à contour, interrupteurs « off » en acier sombre, flèches, curseurs,
+  icônes de vue et de barre de menu en acier bleuté (_tools/make_tron_controls.py).
+- Affiches : anneau néon avec halo pour l'affiche sélectionnée (vue Mur et autres vues), filet discret au repos,
+  étui sombre à filet cyan dans les listes et fiches ; bandeaux d'infos, étiquettes de genre et grand panneau
+  des vues aux coins coupés (_tools/make_tron_covers.py).
+- Menu contextuel et en-tête des menus de l'écran de lecture en cadre B+ (_tools/make_tron_menu.py).
+- Pastilles en disque : non vu (anneau éteint), en cours (arc allumé selon l'avancement), vu (disque lumineux
+  et coche). Icônes par défaut (223) en cyan néon avec halo ; pointeur cyan (_tools/make_tron_icons.py).
+- Impulsion lumineuse : une tête de lumière file le long du bord haut des fenêtres et du menu contextuel,
+  avec une traînée qui s'efface (cycle de 6,5 s, include NextFramePulse, désactivée par le mode « peu
+  d'animations ») (_tools/make_tron_pulse.py).
+- Guide TV : cases de l'EPG à coins coupés et filet lumineux (couleurs de genre conservées), icônes PVR
+  (_tools/make_tron_pvr.py).
+- Dépôt : nouvelle icône, fanart, bannière et 5 captures (maquettes avec contenus fictifs).
+
+------------------------
 [B]1.0.6 (06-November-26) - Next-Rapier-avdvplus[/B]
 ------------------------
 - Barre de progression en trait de lumière : cœur blanc et halo cyan pour la partie lue, tête lumineuse au
