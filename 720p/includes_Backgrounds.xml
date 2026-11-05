@@ -628,7 +628,6 @@
 	<variable name="BackgroundHomeVar">
 		<value condition="!String.IsEmpty(Container(9050).ListItem.Art(fanart))">$INFO[Container(9050).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(850).ListItem.Thumb)">$INFO[Container(850).ListItem.Thumb]</value>
-		<value condition="Container(850).HasFocus(16)">black.png</value>
 		<value condition="!String.IsEmpty(Skin.String(CustomDefaultBGPath))">$INFO[Skin.String(CustomDefaultBGPath)]</value>
 		<value>background-default.png</value>
 	</variable>
