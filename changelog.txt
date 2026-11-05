@@ -1,4 +1,10 @@
 ------------------------
+[B]21.0.17 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Accueil : moulure dorée du bandeau affinée (variante T3, 21 px en 1080p au lieu de 30) et or plus mat
+  (luminosité -28 %, saturation -15 %, contraste -10 %).
+
+------------------------
 [B]21.0.16 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Accueil : moulure dorée Art déco (losanges et chevrons) posée sur le bord haut du bandeau du menu,

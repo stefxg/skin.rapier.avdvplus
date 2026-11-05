@@ -90,10 +90,10 @@
 		</control>
 
 		<control type="image">
-			<description>Gold Art Deco trim on top of the bar (30 px at 1080p)</description>
-			<top>-17</top>
+			<description>Gold Art Deco trim on top of the bar (21 px at 1080p, matte gold)</description>
+			<top>-12</top>
 			<width>ScreenWidth</width>
-			<height>20</height>
+			<height>14</height>
 			<texture>gui/home-menu-bar-trim.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
