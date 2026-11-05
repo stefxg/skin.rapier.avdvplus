@@ -1,4 +1,10 @@
 ------------------------
+[B]21.0.6 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Vue Mur, style Moyen : liseré bleu (même épaisseur et même teinte que celui de l'affiche agrandie)
+  sur les trois côtés du panneau d'infos étendues qui ne touchent pas l'affiche.
+
+------------------------
 [B]21.0.5 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Vue Mur, style Moyen : le panneau d'infos étendues est collé au liseré bleu de l'affiche agrandie,
