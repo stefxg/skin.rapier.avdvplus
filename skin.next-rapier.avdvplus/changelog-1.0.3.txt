@@ -1,4 +1,15 @@
 ------------------------
+[B]1.0.3 (05-November-26) - Next-Rapier-avdvplus[/B]
+------------------------
+- Nouveau fond par défaut « Cité néon » : ville futuriste et grille cyan (image générée par ChatGPT,
+  recadrée en 16:9, 1920 x 1080, media/background-default.png).
+- Glow animé : calque de halo néon (media/background-default-glow.png, extrait des lumières de l'image en
+  4 niveaux de flou) posé sur le fond et pulsé en boucle (opacité 30 % <-> 100 %, cycle de 3 s).
+  Actif seulement quand l'image intégrée est affichée (accueil sans fanart, fenêtres sur le fond global) ;
+  jamais sur un fanart ni un fond personnalisé (expression NextDefaultBGIsBuiltin, include NextDefaultBGGlow).
+- Choix « Image de la skin » : Cité néon / Grille - Orange.
+
+------------------------
 [B]1.0.2 (05-November-26) - Next-Rapier-avdvplus[/B]
 ------------------------
 - Couleurs Tron: Legacy : tous les bleus de Rapier passés en cyan (#00D8FF).
