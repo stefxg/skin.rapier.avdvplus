@@ -1,4 +1,11 @@
 ------------------------
+[B]21.0.4 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Vue Mur (films, séries) : nouveau style de vue « Moyen », 11 colonnes x 4 lignes = 44 affiches de 116 x 168
+  (entre Normal 8 x 3 et Petit 14 x 5). Se comporte comme Normal : affiche agrandie au focus et panneau
+  d'infos étendues, repositionné pour la grille 11 x 4.
+
+------------------------
 [B]21.0.3 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Réglages de la skin > Général : nouvelle option « Masquer la barre du haut dans les médiathèques ».

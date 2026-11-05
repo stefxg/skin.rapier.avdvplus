@@ -1487,6 +1487,17 @@
 				<include>ReloadSkinNotification</include>
 				<visible>Skin.String(CurrentViewMode,69) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)]</visible>
 			</control>
+			<control type="radiobutton" id="2023">
+				<description>Rapier avdvplus : Wall Use Style 3 - Medium 11x4 (Movies) (TVShows)</description>
+				<include>DropDownMenuRadioBtn</include>
+				<label>$LOCALIZE[31784]</label>
+				<selected>[[Container.Content(Movies) | Container.Content(Sets)] + Skin.String(MoviesWallStyle,3)] | [Container.Content(TVShows) + Skin.String(TVShowsWallStyle,3)]</selected>
+				<onclick condition="Container.Content(Movies) | Container.Content(Sets)">Skin.SetString(MoviesWallStyle,3)</onclick>
+				<onclick condition="Container.Content(TVShows)">Skin.SetString(TVShowsWallStyle,3)</onclick>
+				<onclick>ReloadSkin()</onclick>
+				<include>ReloadSkinNotification</include>
+				<visible>Skin.String(CurrentViewMode,69) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)]</visible>
+			</control>
 			<control type="radiobutton" id="2022">
 				<description>Wall Use Style 2 (Movies) (TVShows)</description>
 				<include>DropDownMenuRadioBtn</include>

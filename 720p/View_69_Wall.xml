@@ -48,6 +48,22 @@
 						<param name="top2" value="145" />
 					</include>
 				</itemlayout>
+				<!-- Rapier avdvplus : style Moyen, 11 colonnes x 4 lignes -->
+				<itemlayout width="116" height="168" condition="[Container.Content(Movies) + Skin.String(MoviesWallStyle,3)] | [Container.Content(TVShows) + Skin.String(TVShowsWallStyle,3)]">
+					<include content="WallItemlayout">
+						<param name="left" value="10" />
+						<param name="width" value="116" />
+						<param name="height" value="168" />
+						<param name="top1" value="143" />
+						<param name="top2" value="178" />
+						<param name="overlay_left" value="91" />
+					</include>
+					<include content="WallUnwatchedEpisodes">
+						<param name="left" value="89" />
+						<param name="top1" value="143" />
+						<param name="top2" value="178" />
+					</include>
+				</itemlayout>
 				<itemlayout width="214" height="225" condition="Container.Content(Albums)">
 					<control type="image">
 						<description>Default Cover</description>
@@ -112,6 +128,19 @@
 						<include condition="![Skin.String(LowCPUPowerMode,Animations) | Skin.String(LowCPUPowerMode,Full)]">WallStyle2FocusAnim</include>
 					</control>
 				</focusedlayout>
+				<focusedlayout width="116" height="168" condition="[Container.Content(Movies) + Skin.String(MoviesWallStyle,3)] | [Container.Content(TVShows) + Skin.String(TVShowsWallStyle,3)]">
+					<control type="group">
+						<depth>DepthContent+</depth>
+						<include content="WallFocusedlayout">
+							<param name="width" value="136" />
+							<param name="height" value="188" />
+							<param name="top" value="143" />
+							<param name="left_movies" value="91" />
+							<param name="left_tvshows" value="89" />
+						</include>
+						<include condition="![Skin.String(LowCPUPowerMode,Animations) | Skin.String(LowCPUPowerMode,Full)]">WallStyle3FocusAnim</include>
+					</control>
+				</focusedlayout>
 				<focusedlayout width="214" height="225" condition="Container.Content(Albums)">
 					<control type="group">
 						<depth>DepthContent+</depth>
@@ -157,23 +186,38 @@
 				<left>-3</left>
 				<top>43</top>
 				
-				<animation effect="slide" end="159,0" condition="Container(69).Row(0) + Container(69).Column(5)">Conditional</animation>
-				<animation effect="slide" end="319,0" condition="Container(69).Row(0) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
-				<animation effect="slide" end="479,0" condition="Container(69).Row(0) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
-				<animation effect="slide" end="639,0" condition="Container(69).Row(0) + Container(69).Column(2)">Conditional</animation>
-				<animation effect="slide" end="799,0" condition="Container(69).Row(0) + Container(69).Column(3)">Conditional</animation>
-				<animation effect="slide" end="159,177" condition="Container(69).Row(1) + Container(69).Column(5)">Conditional</animation>
-				<animation effect="slide" end="319,177" condition="Container(69).Row(1) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
-				<animation effect="slide" end="479,177" condition="Container(69).Row(1) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
-				<animation effect="slide" end="639,177" condition="Container(69).Row(1) + Container(69).Column(2)">Conditional</animation>
-				<animation effect="slide" end="799,177" condition="Container(69).Row(1) + Container(69).Column(3)">Conditional</animation>
-				<animation effect="slide" end="0,177" condition="Container(69).Row(1) + Container(69).Column(4)">Conditional</animation>
-				<animation effect="slide" end="159,347" condition="Container(69).Row(2) + Container(69).Column(5)">Conditional</animation>
-				<animation effect="slide" end="319,347" condition="Container(69).Row(2) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
-				<animation effect="slide" end="479,347" condition="Container(69).Row(2) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
-				<animation effect="slide" end="639,347" condition="Container(69).Row(2) + Container(69).Column(2)">Conditional</animation>
-				<animation effect="slide" end="799,347" condition="Container(69).Row(2) + Container(69).Column(3)">Conditional</animation>
-				<animation effect="slide" end="0,347" condition="Container(69).Row(2) + Container(69).Column(4)">Conditional</animation>
+				<animation effect="slide" end="159,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + Container(69).Column(5)">Conditional</animation>
+				<animation effect="slide" end="319,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
+				<animation effect="slide" end="479,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
+				<animation effect="slide" end="639,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="799,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="159,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + Container(69).Column(5)">Conditional</animation>
+				<animation effect="slide" end="319,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
+				<animation effect="slide" end="479,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
+				<animation effect="slide" end="639,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="799,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="0,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + Container(69).Column(4)">Conditional</animation>
+				<animation effect="slide" end="159,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + Container(69).Column(5)">Conditional</animation>
+				<animation effect="slide" end="319,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
+				<animation effect="slide" end="479,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
+				<animation effect="slide" end="639,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="799,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="0,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + Container(69).Column(4)">Conditional</animation>
+
+				<!-- Rapier avdvplus : positions du panneau étendu pour le style Moyen (11 x 4) -->
+				<animation effect="slide" end="231,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(0)">Conditional</animation>
+				<animation effect="slide" end="347,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(1)">Conditional</animation>
+				<animation effect="slide" end="463,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="579,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="695,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(4)">Conditional</animation>
+				<animation effect="slide" end="100,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(6)">Conditional</animation>
+				<animation effect="slide" end="216,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(7)">Conditional</animation>
+				<animation effect="slide" end="332,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(8)">Conditional</animation>
+				<animation effect="slide" end="448,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(9)">Conditional</animation>
+				<animation effect="slide" end="564,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(10)">Conditional</animation>
+				<animation effect="slide" end="0,88" condition="$EXP[AvdvWallMedium] + Container(69).Row(1)">Conditional</animation>
+				<animation effect="slide" end="0,256" condition="$EXP[AvdvWallMedium] + Container(69).Row(2)">Conditional</animation>
+				<animation effect="slide" end="0,342" condition="$EXP[AvdvWallMedium] + Container(69).Row(3)">Conditional</animation>
 				
 				<animation type="Visible">
 					<effect type="fade" start="0" end="100" time="300"/>

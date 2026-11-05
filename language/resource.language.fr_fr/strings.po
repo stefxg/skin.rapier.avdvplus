@@ -1758,6 +1758,10 @@ msgctxt "#31783"
 msgid "Hide the top bar in media libraries"
 msgstr "Masquer la barre du haut dans les médiathèques"
 
+msgctxt "#31784"
+msgid "Medium"
+msgstr "Moyen"
+
 msgctxt "#31900"
 msgid "Select multi image path for tv channels / recordings"
 msgstr "Sélectionner le chemin multi-images pour les chaînes / enregistrements TV"

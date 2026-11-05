@@ -14,6 +14,9 @@
 	<!-- barre du haut des médiathèques masquée en permanence (sauf menu d'options 555 actif) -->
 	<expression name="AvdvLibraryTopBarHidden">Skin.HasSetting(avdv.HideLibraryTopBar) + !Control.HasFocus(555)</expression>
 
+	<!-- vue Mur, style Moyen (11 x 4) -->
+	<expression name="AvdvWallMedium">[Container.Content(Movies) + Skin.String(MoviesWallStyle,3)] | [Container.Content(TVShows) + Skin.String(TVShowsWallStyle,3)]</expression>
+
 	<!-- ============================================================ variables -->
 	<variable name="AvdvHdrTypeVar">
 		<value condition="!String.IsEmpty(Player.Process(video.source.hdr.type))">$INFO[Player.Process(video.source.hdr.type)]$INFO[Player.Process(video.source.additional.hdr.type), + ,]$VAR[AvdvDualTrackVar, (,)]</value>

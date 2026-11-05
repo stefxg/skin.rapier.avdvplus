@@ -862,6 +862,18 @@
 		<animation effect="slide" start="0,0" end="-31,-40" time="300" delay="600" tween="back" easing="out" reversible="false" condition="Container.Column(7) + Container.Row(2)">Conditional</animation>
 	</include>
 	
+	<include name="WallStyle3FocusAnim">
+		<animation effect="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out" reversible="false">Focus</animation>
+		<animation effect="slide" start="0,0" end="19,26" time="300" delay="600" tween="back" easing="out" reversible="false" condition="Container.Column(0) + Container.Row(0)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,26" time="300" delay="600" tween="back" easing="out" reversible="false" condition="!Container.Column(0) + !Container.Column(10) + Container.Row(0)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-23,26" time="300" delay="600" tween="back" easing="out" reversible="false" condition="Container.Column(10) + Container.Row(0)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="19,0" time="300" delay="600" tween="back" easing="out" reversible="false" condition="Container.Column(0) + ![Container.Row(0) | Container.Row(3)]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-23,0" time="300" delay="600" tween="back" easing="out" reversible="false" condition="Container.Column(10) + ![Container.Row(0) | Container.Row(3)]">Conditional</animation>
+		<animation effect="slide" start="0,0" end="19,-31" time="300" delay="600" tween="back" easing="out" reversible="false" condition="Container.Column(0) + Container.Row(3)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="0,-31" time="300" delay="600" tween="back" easing="out" reversible="false" condition="!Container.Column(0) + !Container.Column(10) + Container.Row(3)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="-23,-31" time="300" delay="600" tween="back" easing="out" reversible="false" condition="Container.Column(10) + Container.Row(3)">Conditional</animation>
+	</include>
+
 	<include name="WallStyle2FocusAnim">
 		<animation effect="zoom" start="100" end="140" center="auto" time="300" delay="600" tween="back" easing="out" reversible="false">Focus</animation>
 		<animation effect="slide" start="0,0" end="17,21" time="300" delay="600" tween="back" easing="out" reversible="false" condition="Container.Column(0) + Container.Row(0)">Conditional</animation>
