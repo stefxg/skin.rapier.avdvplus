@@ -181,43 +181,29 @@
 			
 			<control type="group">
 				<animation effect="slide" end="0,-22" time="0" condition="Skin.HasSetting(avdv.HideLibraryTopBar)">Conditional</animation>
-				<visible>Control.HasFocus(69) + System.IdleTime(1) + [[Container.Content(Movies) + Skin.HasSetting(HideMoviesWallExtendedInfoPanel)] | [Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallExtendedInfoPanel)]] + !String.IsEmpty(ListItem.Title)</visible>
+				<visible>Control.HasFocus(69) + System.IdleTime(1) + [[Container.Content(Movies) + Skin.HasSetting(HideMoviesWallExtendedInfoPanel)] | [Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallExtendedInfoPanel)]] + !String.IsEmpty(ListItem.Title) + !$EXP[AvdvWallMedium]</visible>
 				<depth>DepthContent+</depth>
 				<left>-3</left>
 				<top>43</top>
 				
-				<animation effect="slide" end="159,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + Container(69).Column(5)">Conditional</animation>
-				<animation effect="slide" end="319,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
-				<animation effect="slide" end="479,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
-				<animation effect="slide" end="639,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + Container(69).Column(2)">Conditional</animation>
-				<animation effect="slide" end="799,0" condition="!$EXP[AvdvWallMedium] + Container(69).Row(0) + Container(69).Column(3)">Conditional</animation>
-				<animation effect="slide" end="159,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + Container(69).Column(5)">Conditional</animation>
-				<animation effect="slide" end="319,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
-				<animation effect="slide" end="479,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
-				<animation effect="slide" end="639,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + Container(69).Column(2)">Conditional</animation>
-				<animation effect="slide" end="799,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + Container(69).Column(3)">Conditional</animation>
-				<animation effect="slide" end="0,177" condition="!$EXP[AvdvWallMedium] + Container(69).Row(1) + Container(69).Column(4)">Conditional</animation>
-				<animation effect="slide" end="159,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + Container(69).Column(5)">Conditional</animation>
-				<animation effect="slide" end="319,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
-				<animation effect="slide" end="479,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
-				<animation effect="slide" end="639,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + Container(69).Column(2)">Conditional</animation>
-				<animation effect="slide" end="799,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + Container(69).Column(3)">Conditional</animation>
-				<animation effect="slide" end="0,347" condition="!$EXP[AvdvWallMedium] + Container(69).Row(2) + Container(69).Column(4)">Conditional</animation>
+				<animation effect="slide" end="159,0" condition="Container(69).Row(0) + Container(69).Column(5)">Conditional</animation>
+				<animation effect="slide" end="319,0" condition="Container(69).Row(0) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
+				<animation effect="slide" end="479,0" condition="Container(69).Row(0) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
+				<animation effect="slide" end="639,0" condition="Container(69).Row(0) + Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="799,0" condition="Container(69).Row(0) + Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="159,177" condition="Container(69).Row(1) + Container(69).Column(5)">Conditional</animation>
+				<animation effect="slide" end="319,177" condition="Container(69).Row(1) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
+				<animation effect="slide" end="479,177" condition="Container(69).Row(1) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
+				<animation effect="slide" end="639,177" condition="Container(69).Row(1) + Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="799,177" condition="Container(69).Row(1) + Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="0,177" condition="Container(69).Row(1) + Container(69).Column(4)">Conditional</animation>
+				<animation effect="slide" end="159,347" condition="Container(69).Row(2) + Container(69).Column(5)">Conditional</animation>
+				<animation effect="slide" end="319,347" condition="Container(69).Row(2) + [Container(69).Column(0) | Container(69).Column(6)]">Conditional</animation>
+				<animation effect="slide" end="479,347" condition="Container(69).Row(2) + [Container(69).Column(1) | Container(69).Column(7)]">Conditional</animation>
+				<animation effect="slide" end="639,347" condition="Container(69).Row(2) + Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="799,347" condition="Container(69).Row(2) + Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="0,347" condition="Container(69).Row(2) + Container(69).Column(4)">Conditional</animation>
 
-				<!-- Rapier avdvplus : positions du panneau étendu pour le style Moyen (11 x 4) -->
-				<animation effect="slide" end="231,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(0)">Conditional</animation>
-				<animation effect="slide" end="347,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(1)">Conditional</animation>
-				<animation effect="slide" end="463,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(2)">Conditional</animation>
-				<animation effect="slide" end="579,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(3)">Conditional</animation>
-				<animation effect="slide" end="695,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(4)">Conditional</animation>
-				<animation effect="slide" end="100,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(6)">Conditional</animation>
-				<animation effect="slide" end="216,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(7)">Conditional</animation>
-				<animation effect="slide" end="332,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(8)">Conditional</animation>
-				<animation effect="slide" end="448,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(9)">Conditional</animation>
-				<animation effect="slide" end="564,0" condition="$EXP[AvdvWallMedium] + Container(69).Column(10)">Conditional</animation>
-				<animation effect="slide" end="0,88" condition="$EXP[AvdvWallMedium] + Container(69).Row(1)">Conditional</animation>
-				<animation effect="slide" end="0,256" condition="$EXP[AvdvWallMedium] + Container(69).Row(2)">Conditional</animation>
-				<animation effect="slide" end="0,342" condition="$EXP[AvdvWallMedium] + Container(69).Row(3)">Conditional</animation>
 				
 				<animation type="Visible">
 					<effect type="fade" start="0" end="100" time="300"/>
@@ -383,6 +369,221 @@
 					<description>Media Flags Area</description>
 					<left>13</left>
 					<top>285</top>
+					<width>461</width>
+					<height>35</height>
+					<itemgap>5</itemgap>
+					<align>center</align>
+					<usecontrolcoords>true</usecontrolcoords>
+					<orientation>horizontal</orientation>
+					<include>MediaFlagFadeAnim</include>
+					<visible>Container.Content(TVShows) + !Skin.HasSetting(DisableMediaFlags)</visible>
+					<control type="group">
+						<visible>System.AddonIsEnabled(plugin.video.themoviedb.helper) + !Skin.HasSetting(EnableNextAiredStatusMediaFlag)</visible>
+						<width>104</width>
+						<control type="image">
+							<width>104</width>
+							<height>35</height>
+							<texture border="6">flagging/$VAR[MediaFlagTheme]/flag-big-bg.png</texture>
+							<animation effect="fade" time="200">VisibleChange</animation>
+							<visible>![String.IsEmpty(Container(5055).ListItem.Status) + String.IsEmpty(ListItem.Status)]</visible>
+						</control>
+						<control type="label">
+							<description>Next Aired Status</description>
+							<left>2</left>
+							<width>100</width>
+							<height>35</height>
+							<font>NextAiredTimeFont</font>
+							<textcolor>SelectedColor</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<wrapmultiline>true</wrapmultiline>
+							<label>$VAR[TVShowStatusVar]</label>
+						</control>
+					</control>
+					<control type="group">
+						<visible>!String.IsEmpty(ListItem.Studio)</visible>
+						<width>58</width>
+						<control type="image">
+							<width>58</width>
+							<height>35</height>
+							<texture border="6">flagging/$VAR[MediaFlagTheme]/flag-bg.png</texture>
+						</control>
+						<control type="image">
+							<description>Studio Flag</description>
+							<width>58</width>
+							<height>35</height>
+							<aspectratio>stretch</aspectratio>
+							<texture>resource://resource.images.studios.white/$INFO[ListItem.Studio].png</texture>
+						</control>
+					</control>
+				</control>
+			</control>
+			
+			<control type="group">
+				<description>Rapier avdvplus : panneau d'infos étendues, style Moyen</description>
+				<animation effect="slide" end="0,-22" time="0" condition="Skin.HasSetting(avdv.HideLibraryTopBar)">Conditional</animation>
+				<visible>Control.HasFocus(69) + System.IdleTime(1) + [[Container.Content(Movies) + Skin.HasSetting(HideMoviesWallExtendedInfoPanel)] | [Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallExtendedInfoPanel)]] + !String.IsEmpty(ListItem.Title) + $EXP[AvdvWallMedium]</visible>
+				<depth>DepthContent+</depth>
+				<left>0</left>
+				<top>0</top>
+				
+
+				
+				<!-- Rapier avdvplus : style Moyen 11 x 4, panneau collé au liseré bleu (colonnes 0-5 : à droite, 6-10 : à gauche) -->
+				<animation effect="slide" end="177,0" condition="Container(69).Column(0)">Conditional</animation>
+				<animation effect="slide" end="266,0" condition="Container(69).Column(1)">Conditional</animation>
+				<animation effect="slide" end="382,0" condition="Container(69).Column(2)">Conditional</animation>
+				<animation effect="slide" end="498,0" condition="Container(69).Column(3)">Conditional</animation>
+				<animation effect="slide" end="614,0" condition="Container(69).Column(4)">Conditional</animation>
+				<animation effect="slide" end="730,0" condition="Container(69).Column(5)">Conditional</animation>
+				<animation effect="slide" end="183,0" condition="Container(69).Column(6)">Conditional</animation>
+				<animation effect="slide" end="299,0" condition="Container(69).Column(7)">Conditional</animation>
+				<animation effect="slide" end="415,0" condition="Container(69).Column(8)">Conditional</animation>
+				<animation effect="slide" end="531,0" condition="Container(69).Column(9)">Conditional</animation>
+				<animation effect="slide" end="615,0" condition="Container(69).Column(10)">Conditional</animation>
+				<animation effect="slide" end="0,45" condition="Container(69).Row(0)">Conditional</animation>
+				<animation effect="slide" end="0,176" condition="Container(69).Row(1)">Conditional</animation>
+				<animation effect="slide" end="0,344" condition="Container(69).Row(2)">Conditional</animation>
+				<animation effect="slide" end="0,469" condition="Container(69).Row(3)">Conditional</animation>
+				
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="300"/>
+					<effect type="zoom" end="100" start="50" time="400" tween="back" easing="out" center="243,124"/>
+				</animation>
+				
+				<control type="image">
+					<width>487</width>
+					<height>249</height>
+					<texture border="8">panels/panel.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				
+				<control type="image">
+					<description>Content Background</description>
+					<left>8</left>
+					<top>8</top>
+					<width>471</width>
+					<height>233</height>
+					<texture border="4">panels/panel-content-border2.png</texture>
+					<include>ListInfoViewContentBackgroundFadeAnim</include>
+				</control>
+				
+				<control type="image">
+					<left>13</left>
+					<top>12</top>
+					<width>461</width>
+					<height>25</height>
+					<texture border="4">panels/panel3.png</texture>
+					<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+				</control>
+				
+				<control type="image">
+					<left>13</left>
+					<top>40</top>
+					<width>461</width>
+					<height>130</height>
+					<texture border="4">panels/panel3.png</texture>
+					<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+				</control>
+				
+				<control type="image">
+					<left>13</left>
+					<top>173</top>
+					<width>461</width>
+					<height>25</height>
+					<texture border="4">panels/panel3.png</texture>
+					<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+				</control>
+				
+				<control type="image">
+					<left>13</left>
+					<top>201</top>
+					<width>461</width>
+					<height>25</height>
+					<texture border="4">panels/panel3.png</texture>
+					<include>ListInfoViewMediaInfoBackgroundFadeAnim</include>
+					<visible>ListItem.IsCollection</visible>
+				</control>
+				
+				<control type="label">
+					<description>Genre</description>
+					<left>18</left>
+					<top>12</top>
+					<width>451</width>
+					<height>25</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>MediaInfoFont2</font>
+					<textcolor>MediaInfoItemColor2</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<label>[UPPERCASE]$VAR[MovieGenre][/UPPERCASE]</label>
+					<scroll>true</scroll>
+				</control>
+				
+				<control type="textbox">
+					<description>Plot</description>
+					<left>18</left>
+					<top>44</top>
+					<width>451</width>
+					<height>122</height>
+					<font>SettingsContentFont2</font>
+					<textcolor>MediaInfoColor</textcolor>
+					<shadowcolor>ShadowColor</shadowcolor>
+					<align>justify</align>
+					<label fallback="31203">$VAR[WallPlot]</label>
+					<wrapmultiline>true</wrapmultiline>
+					<autoscroll time="2000" delay="6000" repeat="10000">true</autoscroll>
+					<include>ControlsOpenCloseAnim</include>
+				</control>
+				
+				<control type="label">
+					<description>Media Info</description>
+					<left>14</left>
+					<top>173</top>
+					<width>459</width>
+					<height>25</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<include>ListInfoViewCatLabel</include>
+					<label>$VAR[WallInfolabel]</label>
+				</control>
+				
+				<control type="label">
+					<description>Media Info</description>
+					<left>18</left>
+					<top>201</top>
+					<width>451</width>
+					<height>25</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<include>ListInfoViewCatLabel</include>
+					<label>$VAR[MovieYear,$LOCALIZE[345]: [COLOR=MediaInfoItemColor2],[/COLOR]]</label>
+					<visible>ListItem.IsCollection</visible>
+				</control>
+				
+				<control type="grouplist">
+					<description>Media Flags Area</description>
+					<left>13</left>
+					<top>201</top>
+					<width>461</width>
+					<height>35</height>
+					<itemgap>5</itemgap>
+					<align>center</align>
+					<usecontrolcoords>true</usecontrolcoords>
+					<orientation>horizontal</orientation>
+					<include>MediaFlagFadeAnim</include>
+					<visible>Container.Content(Movies) + !Skin.HasSetting(DisableMediaFlags)</visible>
+					<include>VideoSourceMediaFlags</include>
+					<include>VideoCodecMediaFlags</include>
+					<include>AudioMediaFlags</include>
+					<include>AspectMediaFlags</include>
+					<include>SubtitleMediaFlags</include>
+				</control>
+				
+				<control type="grouplist">
+					<description>Media Flags Area</description>
+					<left>13</left>
+					<top>201</top>
 					<width>461</width>
 					<height>35</height>
 					<itemgap>5</itemgap>
