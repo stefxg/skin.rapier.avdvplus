@@ -1,4 +1,13 @@
 ------------------------
+[B]21.0.13 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Réglages par défaut de la skin = configuration cosmétique de la box du salon (33 options activées,
+  26 valeurs : vue Mur, styles, panneaux masqués, barres, catégories d'accueil, fonds, luminosités...).
+  Appliqués une seule fois au premier démarrage de la skin (Startup.xml, drapeau avdv.defaults.v1),
+  puis à nouveau par Réglages de la skin > Réinitialiser.
+- Nouveau 720p/includes_AvdvDefaults.xml, généré par _tools/make_defaults.py.
+
+------------------------
 [B]21.0.12 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Accueil : le fond global (Terre / Ciel étoilé / perso) reste affiché quand l'entrée Système a le focus.
