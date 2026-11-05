@@ -1,4 +1,13 @@
 ------------------------
+[B]21.0.8 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Vue Mur, style Normal (8 x 3) : même panneau d'infos étendues que le style Moyen.
+  Collé au liseré bleu de l'affiche agrandie, à sa hauteur (329 px), à droite pour les colonnes 1 à 4 et
+  à gauche pour les colonnes 5 à 8 ; sans titre ni clearlogo ; liseré bleu sur les trois autres côtés ;
+  fond en aplat. Résumé plus long (environ 10 lignes).
+- Le panneau d'origine de Rapier ne sert plus qu'au style Petit.
+
+------------------------
 [B]21.0.7 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Vue Mur, style Moyen : fond du panneau d'infos étendues en aplat noir (même opacité qu'avant) au lieu de
