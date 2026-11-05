@@ -1,4 +1,10 @@
 ------------------------
+[B]21.0.18 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Accueil : nouvelle moulure dorée du bandeau (variante N3) : filet fin ponctué de losanges, 21 px en 1080p,
+  centrée sur le bord haut du bandeau, même traitement « or mat » que la 21.0.17.
+
+------------------------
 [B]21.0.17 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Accueil : moulure dorée du bandeau affinée (variante T3, 21 px en 1080p au lieu de 30) et or plus mat
