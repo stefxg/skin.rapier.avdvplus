@@ -1,4 +1,15 @@
 ------------------------
+[B]1.0.5 (05-November-26) - Next-Rapier-avdvplus[/B]
+------------------------
+- Sélection Tron « A+ » à la place de l'aplat cyan : voile cyan en dégradé, contour lumineux avec halo,
+  barre blanche lumineuse de 4 px à gauche, coin haut-droit coupé. Texte blanc sur fond sombre : lisible.
+  - Listes et menus (views/list-focus.png), boutons (controls/button-focus.png), barre latérale
+    (gui/menu-bar-button-focus.png), réglages (settings-button-focus, bascules 1/2 avec leur indicateur
+    conservé), catégorie de réglages, sous-menus de l'accueil.
+  - Sélection « inactive » (list-alt-focus, button-alt-focus) : même forme en version atténuée.
+- Générateur : _tools/make_tron_focus.py.
+
+------------------------
 [B]1.0.4 (05-November-26) - Next-Rapier-avdvplus[/B]
 ------------------------
 - Cadres Tron « B+ » pour tous les menus, dialogues et listes de choix (media/panels/dialog-background*.png) :
