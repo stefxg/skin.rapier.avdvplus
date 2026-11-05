@@ -1,4 +1,12 @@
 ------------------------
+[B]21.0.5 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Vue Mur, style Moyen : le panneau d'infos étendues est collé au liseré bleu de l'affiche agrandie,
+  à la même hauteur (affiche + liseré), à droite pour les colonnes 1 à 6 et à gauche pour les colonnes 7 à 11.
+- Panneau sans titre ni clearlogo : genre, résumé, année / durée / note, logos médias.
+- Styles Normal et Petit inchangés.
+
+------------------------
 [B]21.0.4 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Vue Mur (films, séries) : nouveau style de vue « Moyen », 11 colonnes x 4 lignes = 44 affiches de 116 x 168
