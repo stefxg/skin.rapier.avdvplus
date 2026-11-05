@@ -1,4 +1,12 @@
 ------------------------
+[B]21.0.3 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Réglages de la skin > Général : nouvelle option « Masquer la barre du haut dans les médiathèques ».
+  Vidéos, musique, images, listes de lecture, toutes vues comprises (y compris la vue Mur, exclue de l'option
+  « en cas d'inactivité » d'origine). La barre réapparaît quand le menu d'options du haut est ouvert.
+- Vue Mur : avec cette option, la grille d'affiches remonte de 22 px pour être centrée dans l'écran.
+
+------------------------
 [B]21.0.2 (04-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Vue Mur (films, séries) : « Masquer le panneau infos du bas » et « Masquer le panneau d'infos étendues »

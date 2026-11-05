@@ -1754,6 +1754,10 @@ msgctxt "#31782"
 msgid "Hide the Dolby Vision profile badge"
 msgstr "Masquer le badge du profil Dolby Vision"
 
+msgctxt "#31783"
+msgid "Hide the top bar in media libraries"
+msgstr "Masquer la barre du haut dans les médiathèques"
+
 msgctxt "#31900"
 msgid "Select multi image path for tv channels / recordings"
 msgstr "Sélectionner le chemin multi-images pour les chaînes / enregistrements TV"

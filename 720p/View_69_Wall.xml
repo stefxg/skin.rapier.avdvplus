@@ -9,6 +9,7 @@
 			
 			<control type="panel" id="69">
 				<viewtype label="31113">bigicon</viewtype>
+				<animation effect="slide" end="0,-22" time="0" condition="Skin.HasSetting(avdv.HideLibraryTopBar)">Conditional</animation>
 				<include condition="Window.IsActive(Videos)">WallViewVideoDimensions</include>
 				<include condition="Window.IsActive(Music)">WallViewMusicDimensions</include>
 				<pagecontrol>91202</pagecontrol>
@@ -150,6 +151,7 @@
 			</control>
 			
 			<control type="group">
+				<animation effect="slide" end="0,-22" time="0" condition="Skin.HasSetting(avdv.HideLibraryTopBar)">Conditional</animation>
 				<visible>Control.HasFocus(69) + System.IdleTime(1) + [[Container.Content(Movies) + Skin.HasSetting(HideMoviesWallExtendedInfoPanel)] | [Container.Content(TVShows) + Skin.HasSetting(HideTVShowsWallExtendedInfoPanel)]] + !String.IsEmpty(ListItem.Title)</visible>
 				<depth>DepthContent+</depth>
 				<left>-3</left>

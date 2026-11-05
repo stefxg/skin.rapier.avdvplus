@@ -34,7 +34,7 @@
 		
 		<control type="group">
 			<description>Top Bar Area</description>
-			<visible>$EXP[HideTopBar]</visible>
+			<visible>$EXP[HideTopBar] + !$EXP[AvdvLibraryTopBarHidden]</visible>
 			<depth>DepthTopBar</depth>
 			<include>TopBarImage</include>
 			<include>TopBarOpenCloseAnim</include>

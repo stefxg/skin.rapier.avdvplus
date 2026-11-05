@@ -79,6 +79,13 @@
 					<enable>Skin.HasSetting(HideMenuBar)</enable>
 					<onclick>Skin.ToggleSetting(HideTopBar)</onclick>
 				</control>
+				<control type="radiobutton" id="1040">
+					<description>Rapier avdvplus : hide top bar in media libraries</description>
+					<include>SettingsContentRadioBtn</include>
+					<label>$LOCALIZE[31783]</label>
+					<selected>Skin.HasSetting(avdv.HideLibraryTopBar)</selected>
+					<onclick>Skin.ToggleSetting(avdv.HideLibraryTopBar)</onclick>
+				</control>
 				<control type="togglebutton" id="1002">
 					<description>Scrollbar / Quick Jump</description>
 					<include>SettingsContentToggleBtn</include>

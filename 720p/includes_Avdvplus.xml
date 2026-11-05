@@ -11,6 +11,9 @@
 	<expression name="AvdvIsDolbyVision">[Integer.IsEqual(Player.Process(video.source.hdr.type.raw),3) | String.IsEqual(VideoPlayer.HdrType,dolbyvision)]</expression>
 	<expression name="AvdvHasHdrStatic">[String.IsEqual(Player.Process(video.hdr.has.mdcv),1) | String.IsEqual(Player.Process(video.hdr.has.cll),1) | !String.IsEmpty(Player.Process(video.hdr.max.cll))]</expression>
 
+	<!-- barre du haut des médiathèques masquée en permanence (sauf menu d'options 555 actif) -->
+	<expression name="AvdvLibraryTopBarHidden">Skin.HasSetting(avdv.HideLibraryTopBar) + !Control.HasFocus(555)</expression>
+
 	<!-- ============================================================ variables -->
 	<variable name="AvdvHdrTypeVar">
 		<value condition="!String.IsEmpty(Player.Process(video.source.hdr.type))">$INFO[Player.Process(video.source.hdr.type)]$INFO[Player.Process(video.source.additional.hdr.type), + ,]$VAR[AvdvDualTrackVar, (,)]</value>
