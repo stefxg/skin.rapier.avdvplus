@@ -1,4 +1,16 @@
 ------------------------
+[B]1.0.6 (06-November-26) - Next-Rapier-avdvplus[/B]
+------------------------
+- Barre de progression en trait de lumière : cœur blanc et halo cyan pour la partie lue, tête lumineuse au
+  point de lecture (controls/progress-head.png, righttexture par défaut des barres de progression), trait cyan
+  atténué pour le cache, rail sombre traversé d'une fine ligne cyan. Les barres de cache n'ont pas de tête.
+  S'applique aussi aux autres barres de progression et aux barres de défilement horizontales.
+- Boutons de lecture (42 paires, media/osd) en disque d'identité : disque noir, anneau extérieur cyan,
+  anneau intérieur segmenté, pictogrammes Rapier conservés. Sélection : anneau blanc-cyan avec halo, centre
+  éclairé, pictogramme blanc. Tirets intérieurs orange (#FF8A1E) pour pause et stop.
+- Générateur : _tools/make_tron_osd.py.
+
+------------------------
 [B]1.0.5 (05-November-26) - Next-Rapier-avdvplus[/B]
 ------------------------
 - Sélection Tron « A+ » à la place de l'aplat cyan : voile cyan en dégradé, contour lumineux avec halo,
