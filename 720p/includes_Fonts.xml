@@ -5,14 +5,14 @@
 		<font>
 			<name>HomeCategoryLabelUnfocusFont</name>
 			<filename>PoiretOne-Regular.ttf</filename>
-			<size>36</size>
+			<size>30</size>
 			<style>uppercase</style>
 			<aspect>0.86</aspect>
 		</font>
 		<font>
 			<name>HomeCategoryLabelFocusFont</name>
 			<filename>PoiretOne-Regular.ttf</filename>
-			<size>48</size>
+			<size>40</size>
 			<style>uppercase</style>
 			<aspect>0.86</aspect>
 		</font>

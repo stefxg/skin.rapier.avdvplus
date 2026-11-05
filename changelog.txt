@@ -1,4 +1,11 @@
 ------------------------
+[B]21.0.20 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Accueil : Poiret One réduite (catégorie sélectionnée 48 -> 40, autres 36 -> 30) : « ALIMENTATION »
+  sélectionné ne défile plus (marge d'environ 17 % sur la largeur disponible).
+- Reflet de la catégorie sélectionnée remonté de 5 px (jeu de polices Défaut) pour rester collé au titre.
+
+------------------------
 [B]21.0.19 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Accueil : police Art déco Poiret One (Google Fonts, licence SIL OFL 1.1, fonts/PoiretOne-Regular.ttf)
