@@ -1,4 +1,13 @@
 ------------------------
+[B]21.0.11 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Nouveau fond global par défaut (media/background-default.png, 1920 x 1080) : cinéma Art déco
+  projetant la Terre vue de l'espace.
+- L'ancien fond (ciel étoilé) est conservé (media/background-default-stars.png).
+- Réglages de la skin > Arrière-plans > Global : nouveau bouton « Image de la skin » qui bascule entre
+  « Cinéma - Terre » et « Cinéma - Ciel étoilé » (affiche « Personnalisée » si une image perso est choisie).
+
+------------------------
 [B]21.0.10 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Fond noir uni dans les fenêtres Système / Paramètres : catégories de réglages, réglages de la skin,
