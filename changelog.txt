@@ -1,4 +1,13 @@
 ------------------------
+[B]21.0.10 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Fond noir uni dans les fenêtres Système / Paramètres : catégories de réglages, réglages de la skin,
+  profils, infos système, journal d'événements, gestionnaire de fichiers, extensions, calibrage écran.
+  Le fond global (défaut ou personnalisé) ne s'y affiche plus. Un fond « Système » personnalisé
+  appliqué partout reste prioritaire, comme la vidéo / musique en cours de lecture.
+- Accueil : fond noir lorsque l'entrée Système / Paramètres a le focus (sauf fond Système personnalisé).
+
+------------------------
 [B]21.0.9 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Nouveau fond global par défaut (media/background-default.png, 1920 x 1080) : salle de cinéma Art déco

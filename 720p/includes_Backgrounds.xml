@@ -617,9 +617,18 @@
 		</control>
 	</include>
 	
+	<include name="BackgroundSettings">
+		<!-- avdvplus: plain black background for System / Settings windows (the global default image is not used there) -->
+		<control type="image">
+			<include>BackgroundSize</include>
+			<texture>black.png</texture>
+		</control>
+	</include>
+
 	<variable name="BackgroundHomeVar">
 		<value condition="!String.IsEmpty(Container(9050).ListItem.Art(fanart))">$INFO[Container(9050).ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Container(850).ListItem.Thumb)">$INFO[Container(850).ListItem.Thumb]</value>
+		<value condition="Container(850).HasFocus(16)">black.png</value>
 		<value condition="!String.IsEmpty(Skin.String(CustomDefaultBGPath))">$INFO[Skin.String(CustomDefaultBGPath)]</value>
 		<value>background-default.png</value>
 	</variable>

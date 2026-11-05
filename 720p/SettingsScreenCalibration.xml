@@ -5,7 +5,7 @@
 	<controls>
 		<control type="image">
 			<include>ScreenSize</include>
-			<texture>background-default.png</texture>
+			<texture>black.png</texture>
 		</control>
 		
 		<control type="group">
