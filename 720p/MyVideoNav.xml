@@ -18,6 +18,13 @@
 			<include>BackgroundAddonsFanart</include>
 			<include>BackgroundVideoFanart</include>
 			<include condition="[String.Contains(Container.FolderPath,videodb://musicvideos/genres/) | String.Contains(Container.FolderPath,videodb://movies/genres/) | String.Contains(Container.FolderPath,videodb://tvshows/genres/)] + !String.IsEmpty(Skin.String(MovieGenreFanartAddon.name))">BackgroundGenreFanart</include>
+			<control type="image">
+				<description>avdvplus: plain black background behind the Wall view (movies / TV shows)</description>
+				<include>BackgroundSize</include>
+				<texture>black.png</texture>
+				<visible>Control.IsVisible(69) + [Container.Content(Movies) | Container.Content(TVShows)]</visible>
+				<animation effect="fade" time="300">VisibleChange</animation>
+			</control>
 			<include condition="!Skin.HasSetting(DisableVideoPlayingBG)">BackgroundVideoPlaying</include>
 			<include condition="!Skin.HasSetting(DisableMusicPlayingBG)">BackgroundMusicPlaying</include>
 			<include>BackgroundOpenCloseAnim</include>

@@ -1,4 +1,10 @@
 ------------------------
+[B]21.0.14 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Médiathèque Films / Séries : fond noir uni derrière la vue Mur (tous styles), à la place du fond
+  global et du fanart. Une vidéo ou une musique en cours de lecture reste visible en fond.
+
+------------------------
 [B]21.0.13 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Réglages par défaut de la skin = configuration cosmétique de la box du salon (33 options activées,
