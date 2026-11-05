@@ -1,4 +1,13 @@
 ------------------------
+[B]21.0.21 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Accueil : police Art déco Federo (Google Fonts, licence SIL OFL 1.1, fonts/Federo-Regular.ttf) à la place
+  de Poiret One : catégorie sélectionnée 38, autres 29, sous-menus 13 (resserrées à 86-88 %).
+  « ALIMENTATION » sélectionné tient avec ~18 % de marge (pas de défilement).
+- Reflet de la catégorie sélectionnée recalé (-10 px, jeu de polices Défaut) pour les proportions de Federo.
+- Poiret One retirée de la skin.
+
+------------------------
 [B]21.0.20 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Accueil : Poiret One réduite (catégorie sélectionnée 48 -> 40, autres 36 -> 30) : « ALIMENTATION »
