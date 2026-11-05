@@ -1,4 +1,18 @@
 ------------------------
+[B]1.0.2 (05-November-26) - Next-Rapier-avdvplus[/B]
+------------------------
+- Couleurs Tron: Legacy : tous les bleus de Rapier passés en cyan (#00D8FF).
+  - 165 textures (focus, boutons, barres, icônes, étoiles, vu/non vu…) et 45 couleurs XML
+    (colors/defaults.xml, liserés de la vue Mur…), via _tools/recolor_cyan.py (idempotent).
+  - Fonds de sélection sous texte blanc : luminance d'origine conservée, le texte reste lisible.
+  - Logos codecs / HDR (media/flagging) et studios inchangés ; thèmes de couleur orange / rouge / flat inchangés.
+- Accueil : bandeau noir brillant à fines lignes de balayage, ligne de lumière cyan sur le bord haut,
+  fondu des côtés en noir (remplacent la frise Art déco, la moulure dorée et le fondu bleu nuit).
+- Fond par défaut provisoire : grille Tron en perspective avec horizon lumineux, en cyan ; variante
+  orange au choix (Réglages skin > Arrière-plans > Global > Image de la skin : Grille - Cyan / Grille - Orange).
+- Icône et clearlogo provisoires passés en cyan, police Bruno Ace SC.
+
+------------------------
 [B]1.0.1 (05-November-26) - Next-Rapier-avdvplus[/B]
 ------------------------
 - Accueil : police science-fiction Bruno Ace SC (A sans barre, esprit Tron: Legacy ; Google Fonts,

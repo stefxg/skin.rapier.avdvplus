@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.next-rapier.avdvplus" version="1.0.1" name="Next-Rapier-avdvplus" provider-name="stefxg (d'après Rapier de Scarfa, Gade)">
+<addon id="skin.next-rapier.avdvplus" version="1.0.2" name="Next-Rapier-avdvplus" provider-name="stefxg (d'après Rapier de Scarfa, Gade)">
   <requires>
     <import addon="xbmc.gui" version="5.17.0"/>
     <import addon="script.favourites" version="4.0.9"/>
@@ -31,7 +31,7 @@
       <screenshot>resources/screenshot-09.jpg</screenshot>
       <screenshot>resources/screenshot-10.jpg</screenshot>
     </assets>
-    <news>[B]1.0.1[/B][CR]- Accueil : police sci-fi Bruno Ace SC pour le menu et les sous-menus[CR][B]1.0.0[/B][CR]- Création de Next-Rapier-avdvplus, version futuriste de Rapier avdvplus (base 21.0.21, toutes les fonctions avdvplus)</news>
+    <news>[B]1.0.2[/B][CR]- Couleurs Tron: Legacy : bleus passés en cyan, bandeau noir à ligne de lumière cyan, fond grille provisoire (cyan / orange)[CR][B]1.0.1[/B][CR]- Accueil : police sci-fi Bruno Ace SC pour le menu et les sous-menus[CR][B]1.0.0[/B][CR]- Création de Next-Rapier-avdvplus, version futuriste de Rapier avdvplus (base 21.0.21, toutes les fonctions avdvplus)</news>
     <summary lang="bg_BG">Rapier от Scarfa и Gade.</summary>
     <summary lang="cs_CZ">Grafický vzhled vytvořili Scarfa a Gade.</summary>
     <summary lang="da_DK">Rapier skin af Scarfa, Gade.</summary>
