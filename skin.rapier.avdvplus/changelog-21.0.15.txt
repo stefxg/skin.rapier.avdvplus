@@ -1,4 +1,13 @@
 ------------------------
+[B]21.0.15 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Accueil : nouveau bandeau du menu du bas, frise Art déco bleu nuit et or assortie au fond par défaut
+  (media/gui/home-menu-bar-artdeco.png, 1920 x 171, motif réduit et répété, assombri à 75 %).
+- Filet doré (#D1944A) en haut du bandeau, à la place du trait gris.
+- Fondu des côtés en bleu nuit (#041327) au lieu du noir (media/gui/home-menu-bar-overlay-navy.png).
+- Les anciennes textures restent dans la skin (retour arrière possible).
+
+------------------------
 [B]21.0.14 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Médiathèque Films / Séries : fond noir uni derrière la vue Mur (tous styles), à la place du fond
