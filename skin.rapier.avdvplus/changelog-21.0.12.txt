@@ -1,4 +1,10 @@
 ------------------------
+[B]21.0.12 (05-November-26) - Rapier avdvplus[/B]
+------------------------
+- Accueil : le fond global (Terre / Ciel étoilé / perso) reste affiché quand l'entrée Système a le focus.
+  Le fond noir ne concerne plus que les fenêtres Système / Paramètres elles-mêmes.
+
+------------------------
 [B]21.0.11 (05-November-26) - Rapier avdvplus[/B]
 ------------------------
 - Nouveau fond global par défaut (media/background-default.png, 1920 x 1080) : cinéma Art déco
