@@ -1,4 +1,12 @@
 ------------------------
+[B]1.0.1 (05-November-26) - Next-Rapier-avdvplus[/B]
+------------------------
+- Accueil : police science-fiction Bruno Ace SC (A sans barre, esprit Tron: Legacy ; Google Fonts,
+  licence SIL OFL 1.1, fonts/BrunoAceSC-Regular.ttf) pour les catégories du menu (30 sélectionnée / 23,
+  resserrées à 80 %) et les sous-menus (12, resserrés à 76 %). « ALIMENTATION » sélectionné tient avec
+  ~17 % de marge. Reflet recalé (-14 px, jeu de polices Défaut). Federo retirée.
+
+------------------------
 [B]1.0.0 (05-November-26) - Next-Rapier-avdvplus[/B]
 ------------------------
 - Création de Next-Rapier-avdvplus (skin.next-rapier.avdvplus), version futuriste de Rapier avdvplus.
