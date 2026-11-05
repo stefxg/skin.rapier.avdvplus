@@ -10,3 +10,10 @@ Exécuter depuis la racine du dépôt :
 | `build_zip.py . <dossier_sortie> --exclude themes --exclude _tools --exclude .github` | Construit `skin.rapier.avdvplus-<version>.zip` installable depuis Kodi. |
 
 Les thèmes `themes/` (orange, red, flat) ne sont pas inclus : ils doivent être compilés en `.xbt` avec TexturePacker.
+| `publish_repo.py . <worktree_branche_repo>` | Génère le dépôt Kodi (addons.xml, md5, zips, icônes) à publier sur la branche `repo`. |
+
+## Dépôt Kodi
+- Add-on dépôt : `_repo/repository.stefxg/` (id `repository.stefxg`).
+- Données servies par `https://raw.githubusercontent.com/stefxg/skin.rapier.avdvplus/repo/` (branche `repo`, générée).
+- Publication d'une version : incrémenter `version` dans `addon.xml` (master), committer, puis
+  `python3 _tools/publish_repo.py . <worktree repo>` et committer / pousser la branche `repo`.
