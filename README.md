@@ -6,5 +6,7 @@ URL du dépôt : https://raw.githubusercontent.com/stefxg/skin.rapier.avdvplus/r
 
 Add-ons :
 - repository.stefxg
+- script.kscapex.wall
+- skin.kscapex
 - skin.next-rapier.avdvplus
 - skin.rapier.avdvplus
