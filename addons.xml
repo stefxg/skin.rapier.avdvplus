@@ -23,7 +23,7 @@
   </extension>
 </addon>
 
-<addon id="script.kscapex.wall" version="0.15.5" name="KScapeX wall" provider-name="stefxg">
+<addon id="script.kscapex.wall" version="0.16.0" name="KScapeX wall" provider-name="stefxg">
 	<requires>
 		<import addon="xbmc.python" version="3.0.1"/>
 	</requires>
@@ -33,6 +33,8 @@
 	<extension point="xbmc.service" library="service.py" start="login"/>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Animated cover walls for movies, music and TV with relationship-based shuffle</summary>
+		<summary lang="fr_FR">Murs de jaquettes animés pour les films et les séries, réorganisés selon les liens entre titres</summary>
+		<description lang="fr_FR">Parcourez les médiathèques de films et de séries de Kodi en murs de jaquettes et en listes, avec collections (Nouveautés, En pause, Vus et les vôtres), scènes et scripts de démo, Explorer et filtres, notes et badges de format, favoris et recherche ; les jaquettes liées se réorganisent autour du titre choisi.</description>
 		<description lang="en_GB">Browse the Kodi movie, music and TV libraries as cover walls and lists, with collections (New, Paused, Played and your own), scenes and Demo Scripts, Explore and movie filters, ratings and format badges, favourites, search and Now Playing; related covers rearrange around the selected title.</description>
 		<license>MIT</license>
 		<platform>all</platform>
@@ -43,16 +45,18 @@
 	</extension>
 </addon>
 
-<addon id="skin.kscapex" version="0.15.5" name="KScapeX" provider-name="stefxg">
+<addon id="skin.kscapex" version="0.16.0" name="KScapeX" provider-name="stefxg">
 	<requires>
 		<import addon="xbmc.gui" version="5.17.0"/>
-		<import addon="script.kscapex.wall" version="0.15.5"/>
+		<import addon="script.kscapex.wall" version="0.16.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i"/>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en_GB">Dense, cinematic cover walls for movies, music and TV in Kodi</summary>
+		<summary lang="fr_FR">Murs de jaquettes denses et cinématographiques pour l'Ugoos AM6B+ sous CoreELEC avdvplus</summary>
+		<description lang="fr_FR">Une skin Kodi cinématographique (KScapeX, version de KScape dédiée à l'Ugoos AM6B+ sous CoreELEC avdvplus) : murs de jaquettes animés bord à bord pour les films et les séries, avec réorganisation autour du titre choisi et tri alphabétique, par date de sortie ou d'ajout, vues liste, collections, scènes et scripts de démo, favoris, recherche, commandes de lecture complètes et infos techniques (TinyPPI). Nécessite l'add-on du mur KScapeX (script.kscapex.wall).</description>
 		<description lang="en_GB">A cinematic Kodi skin: edge-to-edge animated cover walls for movies, music and TV shows with related-title shuffling, list views, collections (New, Paused, Played and your own), scenes and Demo Scripts, favourites, search, Now Playing, colour themes, and a Home screen with rotating library artwork and live now-playing video. Requires the KScape wall add-on (script.kscapex.wall) for the animated wall.</description>
 		<license>MIT AND GPL-2.0-only</license>
 		<platform>all</platform>
