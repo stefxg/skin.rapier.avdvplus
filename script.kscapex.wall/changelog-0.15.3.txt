@@ -1,0 +1,34 @@
+[B]0.15.3[/B] (06-11-2026)
+- Mur rempli ligne par ligne : de A à Z de gauche à droite, puis la ligne suivante (avant : colonne par colonne, ce qui semblait aléatoire en lisant une ligne).
+- Menu C > View Options > Sort by : Alphabetical, Release date (les plus récents d'abord) ou Date added (les derniers ajoutés d'abord). Le choix est mémorisé (films et séries séparément) ; le mur repart de sa première jaquette. Une saga regroupée est classée selon son film le plus récent. Les murs d'une collection ou d'une saga gardent leur propre ordre.
+- La bibliothèque est relue une fois au premier lancement (dates de sortie ajoutées au cache).
+
+[B]0.15.2[/B] (06-11-2026)
+- Défilement vertical du mur comme l'horizontal : à chaque changement de ligne, le mur défile d'une seule ligne et le cadre reste sur la ligne du milieu (avant : saut de 2 lignes et recentrage dès qu'on dépassait la 3e ligne). En haut et en bas du mur, le cadre se déplace sans faire défiler.
+
+[B]0.15.1[/B] (06-11-2026)
+- Le service ne relève plus la météo (plus affichée sur l'Accueil).
+
+[B]0.15.0[/B] (06-11-2026)
+- Mur plus léger : badges dessinés par un seul bouton à largeur automatique au lieu d'une image par largeur (1457 contrôles au lieu de 3641 dans le XML du mur, 485 visibles).
+- Touches plus réactives : les cases qui changent de place après un déplacement sont posées en arrière-plan, juste après l'appui.
+- Réorganisation (shuffle) plus fluide : seules les jaquettes visibles s'envolent ; les cases hors écran ne reçoivent plus d'appel, et la mise en attente se fait en une seule fois sur le groupe.
+- Overlay de performance : temps de pose en arrière-plan (« wall.place ») mesuré et résumé à la fermeture du mur.
+
+[B]0.14.4[/B] (06-11-2026)
+- Boutons sans « pulsation » au focus (pulseonselect) : le bouton invisible qui reçoit le focus du mur faisait redessiner tout l'écran 60 fois par seconde au repos.
+
+[B]0.14.3[/B] (06-11-2026)
+- TinyPPI : polices déclarées exactement comme il les attend (special://xbmc/media/Fonts/arial.ttf) ; la 0.14.2 ne suffisait pas.
+- Pastille « lecture en cours » (Accueil, murs, listes, Collections) : l'illustration du film remplace la mini-vidéo en direct, soupçonnée de faire redessiner l'écran 60 fois par seconde.
+
+[B]0.14.2[/B] (06-11-2026)
+- Polices font23_narrow et font32 incluses : TinyPPI ne modifie plus la skin et ne la recharge plus au lancement d'une vidéo.
+- Le logo de chargement du mur ne pulse plus une fois caché (suspecté de faire redessiner l'écran en permanence).
+- Réglages de l'add-on > Performance : bouton « Show redrawn areas » (zones redessinées par Kodi).
+
+[B]0.14.1[/B] (06-11-2026)
+- KScapeX : version de KScape (Oxiadust, 0.14.0) dédiée à l'Ugoos AM6B+ sous CoreELEC avdvplus.
+- Identifiants propres (skin.kscapex, script.kscapex.wall) : s'installe sans conflit avec KScape.
+- La skin installe automatiquement l'add-on du mur (script.kscapex.wall).
+- Version de test : mesures de performance (overlay en haut à gauche, lignes kscape.perf dans kodi.log).
